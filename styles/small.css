@@ -8,6 +8,10 @@
   --background-color:#f8f9fa; /* current header/text color*/
 
   --text-color:#333333; /* current header/text color*/
+
+  --text-font:"Open Sans", sans-serif;
+
+  --heading-font:"Montserrat", sans-serif;
 }
 * {
   margin: 0;
@@ -20,24 +24,26 @@ body {
   background: var(--background-color);
   scroll-behavior: smooth;
   color: var(--text-color);
+  font-family: var(--text-font);
 }
 header {
   display: grid;
   grid-template-columns: 24px auto 44px;
   color: #1a365d;
-  border-bottom: 1px solid #1a365d;
+  border-bottom: 1px solid var(--primary-color);
   width: 100%;
-  gap: 5px;
-  align-items: end;
-  padding: 0.4rem;
+  gap: 10px;
+  align-items: center;
+  padding: 0.6rem;
+  font-family: var(--heading-font);
 }
 header img {
   width: 100%;
   height: auto;
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
 }
 header span {
-  font-size: clamp(1.6rem, 4vw, 3rem);
+  font-size: 1.6rem;
   font-weight: bold;
 }
 header .hamburger,
@@ -58,7 +64,7 @@ nav .times {
   position: absolute;
 }
 nav.navigation {
-  background: rgba(245, 245, 245, 1);
+  background: rgba(245, 245, 245, 0.8);
   width:70%;
   height: 100vh;
   position: fixed;
@@ -67,7 +73,7 @@ nav.navigation {
   transform: translateX(100%);
   transition: transform 0.5s ease;
   z-index: 1000;
-  /* backdrop-filter: blur(2px); */
+  backdrop-filter: blur(5px);
 }
 .navigation.active{
   transform: translateX(0);
@@ -93,7 +99,7 @@ nav.navigation {
 }
 
 .navigation ul li:hover{
-  border-bottom: 1px solid #1a365d;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .navigation ul li.current {
@@ -101,8 +107,8 @@ nav.navigation {
 }
 .navigation ul li a{
   text-decoration: none;
-  color: #1a365d;
-  font-size: clamp(1.3rem, 5vw, 3rem);
+  color: var(--primary-color);
+  font-size: 1.3rem;
   transition: color 0.5s ease;
 }
 .navigation ul li a:hover{
@@ -113,12 +119,13 @@ main{
 }
 main h1{
   padding-left: 1rem;
+  font-family: var(--heading-font);
 
 }
 main .general{
   width: 94%;
   background: #fff;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 1.5rem auto;
   border: none;
   border-radius: 12px;
   overflow: auto;
@@ -127,18 +134,19 @@ main .general{
 }
 .general h2{
   background: #1a365d;
-  color: #ffb703;
+  color: var(--accent-color);
   font-size: 1.4rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
   padding: 0.6rem;
   width: 100%;
+  font-family: var(--heading-font);
 }
 main p{
   padding: 1rem;
-  font-size: clamp(1.1rem, 4vw, 3rem);
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 .general img{
   aspect-ratio: 1 / 1;
@@ -155,10 +163,12 @@ main p{
 }
 
 .general .filterBtns{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  /* justify-content: space-between; */
   align-items: center;
-  margin: 1rem;
+  margin: 1rem 1rem 0 1rem;
 }
 .filterBtns button{
   /* width: 100px; */
@@ -181,18 +191,23 @@ main p{
   grid-template-columns: 1fr;
   align-items: center;
   gap: 5px;
-  padding: 1rem;
+  /* padding: 1rem; */
+}
+p.credit-total{
+  text-align: center;
+  font-weight: bold;
+  padding: 2rem;
 }
 .courseList div{
   margin: 0.4rem;
   background: #f8f9fa;
-  border-left: 5px solid #1a365d;
+  border-left: 5px solid var(--primary-color);
   padding: 0.5rem;
   border-radius: 10px;
   transition: all 0.5s ease;
 }
 .courseList div:hover{
-  background: #1a365d;
+  background: var(--primary-color);
   transform: translateY(-5px); /* Lift effect */
 }
 .courseList div:hover p {

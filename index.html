@@ -1,62 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WDD231 | Web Frontend Development</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WDD231 | Web Frontend Development</title>
 
-  <meta name="description" content="Web Frontend Development course homepage for WDD231, showcasing student portfolio, courses, and project details.">
-  <meta name="author" content="Elemide Joshua Damilare">
+    <meta
+      name="description"
+      content="Web Frontend Development course homepage for WDD231, showcasing student portfolio, courses, and project details."
+    />
+    <meta name="author" content="Elemide Joshua Damilare" />
 
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <script src="scripts/main.js" defer></script>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
 
-  <header>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="/images/home.svg" alt="site-logo" width="512" height="512" />
+      <span>Joshua Damilare</span>
+      <button
+        id="nav-button-menu"
+        class="hamburger"
+        aria-label="navigation"
+      ></button>
+    </header>
 
-    <img src="/images/home.svg" alt="site-logo" width="512" height="512">
-    <span>Joshua Damilare</span>
-    <button id="nav-button-menu" class="hamburger" aria-label="navigation"></button>
+    <nav id="nav-bar" class="navigation">
+      <button
+        id="nav-button-close"
+        class="times"
+        aria-label="navigation"
+      ></button>
+      <ul>
+        <li class="current"><a href="#">Home</a></li>
+        <li><a href="#">Chamber Project</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
 
-  </header>
+    <div class="overlay" id="overlay"></div>
 
-  <nav id="nav-bar" class="navigation">
-    <button id="nav-button-close" class="times" aria-label="navigation"></button>
-    <ul>
-      <li class="current"><a href="#">Home</a></li>
-      <li><a href="#">Chamber</a></li>
-      <li><a href="#">Final</a></li>
-    </ul>
-  </nav>
+    <main>
+      <h1>Home</h1>
 
-  <div class="overlay" id="overlay"></div>
+      <section class="card">
+        <section class="general">
+          <h2>About Me</h2>
+          <p>
+            I am a dedicated software development student at BYU Pathway, passionate about building innovative web and mobile applications. With a strong foundation in programming, web design, and problem-solving, I enjoy turning ideas into functional, user-friendly digital solutions. I am constantly learning new technologies and frameworks, exploring both front-end and back-end development, and applying my skills to practical projects. Beyond coding, I am enthusiastic about collaborating with others, improving workflows, and creating meaningful experiences that combine technology with creativity.
+          </p>
+        </section>
+  
+        <section class="general">
+          <h2>Student Photo</h2>
+          <img src="images/student_photowdd231.webp" alt="Student Photo" />
+        </section>
+        
+      </section>
 
-  <main>
-    <h1>Home</h1>
 
-    <section class="general">
-      <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, itaque enim minus eveniet consequuntur fuga? A similique, assumenda exercitationem ad laborum recusandae fugiat nesciunt quae debitis, omnis asperiores dignissimos quos? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde et commodi, quidem nam reprehenderit rerum placeat tenetur maxime? Eaque quod vitae neque provident asperiores repellendus maxime necessitatibus quis deserunt fugit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, facere et recusandae exercitationem, est illum sed ea architecto, nemo labore ipsam! Minus dolore provident enim aliquam id quibusdam ducimus odit!</p>
-    </section>
+      <section class="general">
+        <h2>Web Certificate Courses</h2>
 
-    <section class="general">
-      <h2>Student Photo</h2>
-      <img src="images/student_photowdd231.webp" alt="Student Photo">
-    </section>
+        <div class="filterBtns">
+          <button id="allBtn" class="all">All</button>
+          <button id="cseBtn" class="cse-btn">CSE</button>
+          <button id="wddBtn" class="wdd-btn">WDD</button>
+        </div>
 
-    <section class="general">
-      <h2>Web Certificate Courses</h2>
+        <p class="credit-total"></p>
 
-      <div class="filterBtns">
-        <button id="allBtn" class="all">All</button>
-        <button id="cseBtn" class="cse-btn">CSE</button>
-        <button id="wddBtn" class="wdd-btn">WDD</button>
-      </div>
-
-      <div class="courseList">
-        <div>
+        <div class="courseList">
+          <!-- <div class="course">
           <p>WDD130</p>
         </div>
 
@@ -66,24 +90,47 @@
 
         <div>
           <p>WDD231</p>
+        </div> -->
+
+          <p>The total number of credit</p>
         </div>
+      </section>
+    </main>
 
+    <footer>
+      <div class="social">
+        <a href="facebok.com" target="_blank"
+          ><img
+            src="images/facebook.svg"
+            alt="Facebook logo"
+            width="16"
+            height="16"
+        /></a>
+        <a href="https://github.com/" target="_blank"
+          ><img
+            src="images/github.svg"
+            alt="Github logo"
+            width="16"
+            height="16"
+        /></a>
+        <a href="https://www.linkedin.com/" target="_blank"
+          ><img
+            src="images/linkedin.svg"
+            alt="Linkedin logo"
+            width="16"
+            height="16"
+        /></a>
+        <a href="https://x.com/" target="_blank"
+          ><img
+            src="images/twitter-x.svg"
+            alt="Twitter logo"
+            width="16"
+            height="16"
+        /></a>
       </div>
-    </section>
 
-  </main>
-
-  <footer>
-    <div class="social">
-      <a href="facebok.com" target="_blank"><img src="images/facebook.svg" alt="Facebook logo" width="16" height="16"></a>
-      <a href="https://github.com/" target="_blank"><img src="images/github.svg" alt="Github logo" width="16" height="16"></a>
-      <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="Linkedin logo" width="16" height="16"></a>
-      <a href="https://x.com/" target="_blank"><img src="images/twitter-x.svg" alt="Twitter logo" width="16" height="16"></a>
-    </div>
-
-    <p id="yearElement"> © 2025 | Elemide Joshua Damilare | Nigeria</p>
-    <p id="lastModifiedElement"></p>
-  </footer>
-
-</body>
+      <p><span id="year-element"></span> | Elemide Joshua Damilare | Nigeria</p>
+      <p id="last-modified"></p>
+    </footer>
+  </body>
 </html>

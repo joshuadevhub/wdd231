@@ -1,0 +1,38 @@
+@media (min-width: 38rem) {
+  header .hamburger,
+  nav .times {
+    display: none;
+  }
+  nav.navigation {
+    width: 100%;
+    height: auto;
+    position: static;
+    transform: none;
+    backdrop-filter: none;
+    background: var(--primary-color);
+  }
+  nav.navigation ul {
+    align-items: center;
+    display: flex;
+  }
+  nav.navigation ul li {
+    padding: 1rem 1rem 1rem 0.5rem;
+  }
+  .navigation ul li a {
+    color: var(--background-color);
+    font-size: 1rem;
+  }
+  .navigation ul li.current {
+    margin-top: 0;
+  }
+  section.card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1px;
+  }
+  .filterBtns,
+  .general .courseList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

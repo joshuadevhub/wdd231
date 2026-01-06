@@ -10,6 +10,7 @@
     transform: none;
     backdrop-filter: none;
     background: var(--primary-color);
+    color: var(--background-color);
   }
   nav.navigation ul {
     align-items: center;

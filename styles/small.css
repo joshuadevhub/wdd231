@@ -74,6 +74,7 @@ nav.navigation {
   transition: transform 0.5s ease;
   z-index: 1000;
   backdrop-filter: blur(5px);
+  color: var(--accent-color);
 }
 .navigation.active{
   transform: translateX(0);
@@ -99,7 +100,7 @@ nav.navigation {
 }
 
 .navigation ul li:hover{
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--background-color);
 }
 
 .navigation ul li.current {

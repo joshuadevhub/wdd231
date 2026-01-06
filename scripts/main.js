@@ -120,7 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (filteredCourseCard.completed === true) {
         courseCard.style.backgroundColor = "#1a365d";
-        courseCard.style.borderLeft = "5px solid white";
         courseCard.style.border = "5px solid #1a365d";
         courseCodeName.style.color = "#f8f9fa";
       }

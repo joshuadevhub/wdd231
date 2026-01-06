@@ -63,8 +63,8 @@ nav .times {
 }
 #nav-button-close::before {
   content: "\00D7";
-  left: 16rem;
-  top: -0.5rem;
+  left: 13rem;
+  top: 1rem;
   position: absolute;
   z-index: 1101;
 }
@@ -113,7 +113,7 @@ nav.navigation {
   border-left: 4px solid var(--secondary-color);
 }
 .navigation ul li.current a{
-  color: var(--secondary-color);
+  color: #26b5d9;
   font-weight: 600;
 }
 .navigation ul li a{

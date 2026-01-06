@@ -59,8 +59,8 @@ nav .times {
 }
 #nav-button-close::before {
   content: "\00D7";
-  left: 16rem;
-  top: -0.5rem;
+  left: 15rem;
+  top: 1rem;
   position: absolute;
 }
 nav.navigation {

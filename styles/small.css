@@ -23,13 +23,13 @@ body {
   flex-direction: column;
   background: var(--background-color);
   scroll-behavior: smooth;
-  color: var(--text-color);
+  /* color: var(--text-color); */
   font-family: var(--text-font);
 }
 header {
   display: grid;
   grid-template-columns: 24px auto 44px;
-  color: #1a365d;
+  color: var(--primary-color);
   border-bottom: 1px solid var(--primary-color);
   width: 100%;
   gap: 10px;

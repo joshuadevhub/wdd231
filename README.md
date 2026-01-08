@@ -51,5 +51,35 @@ HTML and CSS are implemented, with a larger CSS file prepared for future respons
 - Additional accessibility enhancements (ARIA roles, keyboard navigation refinements)  
 - Optional animations or transitions for enhanced UX 
 
+
+
+
+# Latter-day Prophets Project
+
+## Overview
+This project dynamically displays a list of Latter-day Prophets using data fetched from a JSON resource. Each prophet is represented with a card that includes their full name and portrait. The page is styled using CSS for a clean, responsive layout.
+
+## Files
+- **prophets.html** – The main HTML page containing the structure of the site.
+- **prophets.css** – Stylesheet for page layout, card design, and responsive formatting.
+- **prophets.js** – JavaScript file that fetches JSON data and dynamically generates prophet cards.
+- **README.md** – This file.
+
+## Features
+- Fetches prophet data asynchronously using the modern Fetch API.
+- Displays data dynamically in individual cards with headings and portraits.
+- Responsive grid layout that adapts to different screen sizes.
+- Clean and consistent styling using CSS variables and external stylesheet.
+
+## JSON Data Source
+Data for the prophets is retrieved from the following URL:  
+[https://byui-cse.github.io/cse-ww-program/data/latter-day-prophets.json](https://byui-cse.github.io/cse-ww-program/data/latter-day-prophets.json)
+
+## Usage
+1. Open `prophets.html` in a browser.
+2. The page will fetch and display the prophets automatically.
+3. Styling and layout are handled in `prophets.css`, and behavior is handled in `prophets.js`.
+
+
 ## Author
 Elemide Joshua Damilare | Nigeria

@@ -1,0 +1,218 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* --color-primary: #0b2a4a; /* Primary: Backgrounds, headers, buttons */
+  /* --color-secondary: #ffffff; /* Secondary: Text on navy, high contrast */
+  /* --color-accent: #ffb703; Accent: Highlights, buttons, links */
+  /* --color-text: #2c2c2c; Text: Body text on white background */
+  /* --color-light-bg: #f5f5f5; Light Background: Sections to break up navy */
+
+  --primary-color: #0b2a4a; /* current header/text color*/
+
+  --accent-color: #ffb703; /* Excellent for "Current" page indicators or button highlights*/
+
+  --secondary-color: #219ebc; /* Good for hover states on links*/
+
+  --background-color: #f8f9fa; /* current header/text color*/
+
+  --text-color: #333333; /* current header/text color*/
+
+  --text-font: "Open Sans", sans-serif;
+
+  --heading-font: "Montserrat", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  /* outline: 1px solid red; */
+}
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 24px auto 44px 44px;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--primary-color);
+  align-items: center;
+  padding: 0.8rem;
+  font-family: var(--heading-font);
+  gap: 10px;
+  background: #dddddd;
+}
+header img.chevron-logo {
+  object-fit: cover;
+}
+header span {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-left: 1.4rem;
+}
+header button {
+  background: none;
+  border: none;
+  width: 100%;
+  height: auto;
+}
+header .menu-btn img,
+.grid-btn {
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #00000099;
+  opacity: 0;
+  z-index: 900;
+  pointer-events: none;
+  transition: all 0.8s;
+}
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+nav {
+  background: var(--primary-color);
+  width: 80%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  transition: all 0.6s ease;
+  transition-delay: 0.1s;
+}
+nav.show {
+  transform: translateX(0);
+}
+
+header nav .close-btn {
+  background: none;
+  border: none;
+  margin-left: 40%;
+  margin-top: 2rem;
+}
+nav .close-btn img {
+  width: 26px;
+  height: auto;
+}
+nav ul {
+  margin-top: 1.5rem;
+}
+nav ul li {
+  list-style: none;
+  padding: 1.5rem 2rem;
+}
+nav ul li.current {
+  border-left: 4px solid var(--secondary-color);
+}
+nav ul li.current a {
+  color: var(--secondary-color);
+}
+nav ul li:not(.current):hover {
+  border-bottom: 1px solid var(--background-color);
+}
+nav ul li:not(.current):focus,
+nav ul li:not(.current):active {
+  outline: none;
+}
+nav ul li a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+
+main {
+  flex: 1;
+  background-color: var(--background-color);
+  margin: 1rem auto;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  width: 96%;
+  overflow: hidden;
+}
+main div#cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: center;
+  /* background-color: green; */
+  margin: 0.8rem;
+  /* padding: 1rem; */
+}
+
+main section {
+  /* background-color: red; */
+  margin: 0.6rem auto;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  width: 98%;
+  padding: 1rem;
+  transition: transform 0.5s ease;
+}
+main section:hover{
+  transform: scale(1.05);
+}
+
+section p {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+main img {
+  display: block;
+  margin: 0.3rem auto 1rem auto;
+  /* aspect-ratio: 4 / 5; */
+  object-fit: contain;
+  /* padding-top: 0.4rem; */
+  /* background-color: blue; */
+  border-radius: 10px;
+  /* padding-bottom: 1rem; */
+}
+main a{
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+footer {
+  width: 100%;
+  background: #dddddd;
+  padding: 1rem;
+}
+footer .info,
+footer .details {
+  padding: 0.5rem;
+}
+.info .site-name,
+.info p,
+footer .details p {
+  padding: 0.1rem;
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  margin: 0.5rem 0;
+}
+footer .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+footer img {
+  width: 28px;
+  height: 28px;
+}

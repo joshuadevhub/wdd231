@@ -1,0 +1,85 @@
+{
+  "companies": [
+    {
+      "name": "BYU-Pathway Worldwide",
+      "address": "Salt Lake City, Utah, USA",
+      "phone": "+1 (801) 422-7668",
+      "website": "https://www.byupathway.edu",
+      "image": "../chamber/images/byu-pw-logo.svg",
+      "membershipLevel": 1,
+      "industry": "Online Education",
+      "description": "International online education program offering pathways to U.S.-accredited certificates and degrees through flexible online study."
+    },
+    {
+      "name": "Mira Technology",
+      "address": "17 Obafemi Awolowo Way, Ikeja, Lagos, Nigeria",
+      "phone": "+234 803 765 4321",
+      "website": "http://www.miratechnologiesng.com",
+      "image": "../chamber/images/mira-logo.png",
+      "membershipLevel": 2,
+      "industry": "Software & Technology",
+      "description": "Technology solutions and software development company providing digital services and IT support in Lagos."
+    },
+    {
+      "name": "Interswitch Group",
+      "address": "2 Agadez Street, Lekki Phase 1, Lagos",
+      "phone": "+234 1 280 2700",
+      "website": "https://www.interswitchgroup.com",
+      "image": "../chamber/images/interswitch-logo.svg",
+      "membershipLevel": 3,
+      "industry": "Fintech & Payments",
+      "description": "Leading integrated digital payments and commerce company in Nigeria."
+    },
+    {
+      "name": "Andela Nigeria",
+      "address": "Landmark Towers, Victoria Island, Lagos",
+      "phone": "+234 1 631 0200",
+      "website": "https://www.andela.com",
+      "image": "../chamber/images/andela-logo.svg",
+      "membershipLevel": 2,
+      "industry": "Technology",
+      "description": "Global talent network connecting companies with software engineers."
+    },
+    {
+      "name": "Access Bank Plc",
+      "address": "Access Bank Headquarters, Victoria Island, Lagos",
+      "phone": "+234 1 271 2000",
+      "website": "https://www.accessbankplc.com",
+      "image": "../chamber/images/access-logo.png",
+      "membershipLevel": 3,
+      "industry": "Banking",
+      "description": "One of Nigeria's largest commercial banks."
+    },
+    {
+      "name": "Glo (Globacom Limited)",
+      "address": "Plot 7, Ligali Ayorinde Street, Victoria Island, Lagos",
+      "phone": "+234 1 448 9000",
+      "website": "https://www.gloworld.com/ng",
+      "image": "../chamber/images/glo-logo.png",
+      "membershipLevel": 3,
+      "industry": "Telecommunications",
+      "description": "One of Nigeria's leading telecom companies, known for its distinctive green and yellow logo."
+    },
+    {
+      "name": "Guinness Nigeria Plc",
+      "address": "16 Oba Akinjobi Way, Ikeja, Lagos",
+      "phone": "+234 1 448 4000",
+      "website": "https://www.guinness-nigeria.com",
+      "image": "../chamber/images/guiness-logo.svg",
+      "membershipLevel": 3,
+      "industry": "Beverages",
+      "description": "Famous Nigerian brewery producing Guinness stout, with a globally recognized logo."
+    },
+
+    {
+      "name": "Eko Hotels & Suites",
+      "address": "1415 Adetokunbo Ademola Street, Victoria Island, Lagos",
+      "phone": "+234 1 277 2700",
+      "website": "https://www.ekohotels.com",
+      "image": "../chamber/images/ekoHotel-logo.png",
+      "membershipLevel": 3,
+      "industry": "Hospitality",
+      "description": "Luxury hotel and event center in Lagos."
+    }
+  ]
+}

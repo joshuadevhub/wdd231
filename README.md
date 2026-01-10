@@ -23,7 +23,7 @@ HTML and CSS are implemented, with a larger CSS file prepared for future respons
 /styles/
   normalize.css
   small.css
-  large.css (empty for now)
+  large.css
 /images/
 /scripts/main.js
 

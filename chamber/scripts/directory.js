@@ -18,9 +18,6 @@ function closeMenu() {
 menuBtn.addEventListener("click", openMenu);
 closeBtn.addEventListener("click", closeMenu);
 
-
-
-
 // javaScript for the Companies Card
 const cards = document.querySelector("#cards");
 
@@ -47,12 +44,11 @@ const displayData = (companies) => {
     const firstParagraph = document.createElement("p");
     const secondParagraph = document.createElement("p");
     const websiteDetails = document.createElement("p");
-    const website = document.createElement('a');
-
+    const website = document.createElement("a");
 
     img.setAttribute("src", `${company.image}`);
     img.setAttribute("alt", `${company.name} logo`);
-    img.setAttribute("loading", 'lazy');
+    img.setAttribute("loading", "lazy");
     img.width = 130;
     img.height = 100;
 
@@ -60,14 +56,22 @@ const displayData = (companies) => {
     secondParagraph.textContent = `${company.phone}`;
 
     website.textContent = `Click Here For More Details`;
-    website.setAttribute("href", `${company.website}`)
+    website.setAttribute("href", `${company.website}`);
     website.setAttribute("target", `_blank`);
 
     section.appendChild(img);
     section.appendChild(firstParagraph);
     section.appendChild(secondParagraph);
     websiteDetails.appendChild(website);
-    section.appendChild(websiteDetails)
+    section.appendChild(websiteDetails);
     cards.appendChild(section);
-  })
-}
+  });
+};
+
+// javaScript For The Copyright Year and Last Modification
+const yearElement = document.querySelector("#year-element");
+const lastModification = document.querySelector("#last-modified");
+
+const date = new Date();
+yearElement.textContent = `\u00A9 ${date.getFullYear()}`;
+lastModification.textContent = `Last Modification: ${document.lastModified}`;

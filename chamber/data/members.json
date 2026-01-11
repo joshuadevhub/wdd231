@@ -12,7 +12,7 @@
     },
     {
       "name": "Mira Technology",
-      "address": "17 Obafemi Awolowo Way, Ikeja, Lagos, Nigeria",
+      "address": "17 Obafemi Awolowo Way, Lagos",
       "phone": "+234 803 765 4321",
       "website": "http://www.miratechnologiesng.com",
       "image": "../chamber/images/mira-logo.png",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Access Bank Plc",
-      "address": "Access Bank Headquarters, Victoria Island, Lagos",
+      "address": "Access Bank Headquarters, Lagos",
       "phone": "+234 1 271 2000",
       "website": "https://www.accessbankplc.com",
       "image": "../chamber/images/access-logo.png",
@@ -52,7 +52,7 @@
     },
     {
       "name": "Glo (Globacom Limited)",
-      "address": "Plot 7, Ligali Ayorinde Street, Victoria Island, Lagos",
+      "address": "Plot 7, Victoria Island, Lagos",
       "phone": "+234 1 448 9000",
       "website": "https://www.gloworld.com/ng",
       "image": "../chamber/images/glo-logo.png",
@@ -73,7 +73,7 @@
 
     {
       "name": "Eko Hotels & Suites",
-      "address": "1415 Adetokunbo Ademola Street, Victoria Island, Lagos",
+      "address": "1415 Ademola Str, Victoria Island, Lagos",
       "phone": "+234 1 277 2700",
       "website": "https://www.ekohotels.com",
       "image": "../chamber/images/ekoHotel-logo.png",

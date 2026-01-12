@@ -1,85 +1,162 @@
-# wdd231
-Exploring Web Frontend Development at BYU Pathway &amp; BYU–Idaho. Focused on HTML, CSS, and JavaScript with emphasis on user experience, accessibility, compliance, performance optimization, and basic API integration, preparing for advanced web application development.
+# WDD231 – Web Frontend Development  
 
-# WDD231 | Web Frontend Development – Home Page
-This project is the home page for the WDD231 Web Frontend Development course. 
-It showcases a mobile-first layout, header with navigation, content sections, and footer. 
-HTML and CSS are implemented, with a larger CSS file prepared for future responsive enhancements.
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)  
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)  
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)  
 
-## Features
-- Mobile-first HTML and CSS structure
-- Separate CSS files for mobile and future larger screen styles
-- Header with site logo, name, and hamburger menu
-- Sliding side navigation menu with overlay and clear wayfinding (current-page indicator)
-- Sections: About Me, Student Photo, Web Certificate Courses
-- JavaScript filtering of courses  
-- Responsive design for larger screens  
-- Optimized images for faster performance  
-- Accessibility-conscious structure (readable contrast, logical hierarchy)
-- Footer with dynamic content, interactions and dynamic copyright
-
-## File Structure
-/index.html
-/styles/
-  normalize.css
-  small.css
-  large.css
-/images/
-/scripts/main.js
-
+Exploring Web Frontend Development at **BYU Pathway & BYU–Idaho**, focused on **HTML, CSS, and JavaScript**. Emphasis on **UX, accessibility, performance, compliance**, and basic API integration.
 
 ---
 
-### **Step 5: How to View / Run**
-- Simple instructions for someone to open your project locally.
+## Table of Contents
 
-```markdown
-## How to Run
-1. Clone the repository:
-2. Open `index.html` in a browser.
-3. Ensure `/styles` and `/images` folders are in the same directory as `index.html`.
+- [Home Page Project](#home-page-project)  
+- [Latter-day Prophets Project](#latter-day-prophets-project)  
+- [Chamber of Commerce Directory Project](#chamber-of-commerce-directory-project)  
+- [Author](#author)  
 
+---
 
-## Project Status
-- **HTML:** Complete  
-- **CSS:** Complete (including responsive larger screen design)  
-- **JavaScript:** Complete (navigation toggle, course filtering, footer interactions)  
-- **Images:** Optimized for performance  
-- **Accessibility:** Implemented basic best practices 
+## Home Page Project  
 
-## Future Improvements
-- Additional accessibility enhancements (ARIA roles, keyboard navigation refinements)  
-- Optional animations or transitions for enhanced UX 
+<details>
+<summary>Click to expand Home Page details</summary>
 
+**Description:**  
+The **home page** for WDD231 demonstrates a **mobile-first layout** with responsive enhancements for larger screens. Includes header, navigation, content sections, and footer, with interactivity via JavaScript.
 
+**Features:**
 
+- Mobile-first HTML & CSS  
+- Separate CSS files for mobile (`small.css`) and desktop (`large.css`)  
+- Header with site logo, title, and hamburger menu  
+- Sliding side navigation with overlay & current-page indicator  
+- Content sections: About Me, Student Photo, Web Certificate Courses  
+- JavaScript course filtering  
+- Responsive design for desktop & larger screens  
+- Optimized images  
+- Accessibility-conscious structure  
+- Footer with dynamic content & interactions  
 
-# Latter-day Prophets Project
+**File Structure:**
 
-## Overview
-This project dynamically displays a list of Latter-day Prophets using data fetched from a JSON resource. Each prophet is represented with a card that includes their full name and portrait. The page is styled using CSS for a clean, responsive layout.
-
-## Files
-- **prophets.html** – The main HTML page containing the structure of the site.
-- **prophets.css** – Stylesheet for page layout, card design, and responsive formatting.
-- **prophets.js** – JavaScript file that fetches JSON data and dynamically generates prophet cards.
-- **README.md** – This file.
-
-## Features
-- Fetches prophet data asynchronously using the modern Fetch API.
-- Displays data dynamically in individual cards with headings and portraits.
-- Responsive grid layout that adapts to different screen sizes.
-- Clean and consistent styling using CSS variables and external stylesheet.
-
-## JSON Data Source
-Data for the prophets is retrieved from the following URL:  
-[https://byui-cse.github.io/cse-ww-program/data/latter-day-prophets.json](https://byui-cse.github.io/cse-ww-program/data/latter-day-prophets.json)
-
-## Usage
-1. Open `prophets.html` in a browser.
-2. The page will fetch and display the prophets automatically.
-3. Styling and layout are handled in `prophets.css`, and behavior is handled in `prophets.js`.
+/wdd231
+index.html
+/styles
+normalize.css
+small.css
+large.css
+/images
+/scripts
+main.js
 
 
-## Author
-Elemide Joshua Damilare | Nigeria
+**How to Run:**
+
+1. Clone the repository.  
+2. Open `index.html` in a browser.  
+3. Ensure `/styles`, `/images`, and `/scripts` folders remain with `index.html`.  
+
+**Status:**  
+
+- HTML: Complete  
+- CSS: Complete (mobile + desktop)  
+- JS: Complete (navigation toggle, course filtering, footer interactions)  
+- Images: Optimized  
+- Accessibility: Basic best practices  
+
+**Future Improvements:**  
+
+- Enhanced accessibility (ARIA roles, keyboard navigation)  
+- Optional animations/transitions  
+
+</details>
+
+---
+
+## Latter-day Prophets Project  
+
+<details>
+<summary>Click to expand Latter-day Prophets details</summary>
+
+**Description:**  
+Displays **Latter-day Prophets** dynamically using JSON. Each prophet has a card with full name & portrait. Responsive CSS layout for clean design.
+
+**Features:**
+
+- Fetch API to retrieve data  
+- Dynamic card creation  
+- Responsive grid layout  
+- Clean CSS styling  
+
+**File Structure:**
+/wdd231
+prophets.html
+/styles
+prophets.css
+/scripts
+prophets.js
+README.md
+
+**JSON Data Source:**  
+[Prophets JSON]("https://byui-cse.github.io/cse-ww-program/data/latter-day-prophets.json")
+
+**How to Run:**
+
+1. Open `prophets.html` in a browser.  
+2. Data loads automatically via Fetch API.  
+3. CSS handles layout, JS handles dynamic cards.  
+
+</details>
+
+---
+
+## Chamber of Commerce Directory Project  
+
+<details>
+<summary>Click to expand Chamber of Commerce details</summary>
+
+**Description:**  
+A **directory page** for a Chamber of Commerce. Built for mobile & desktop. Fetches data from `members.json` and displays members. Future feature: toggle between **grid and list views**.
+
+**Features:**
+
+- Mobile-first & responsive design  
+- Fetch member data dynamically from JSON  
+- Clear information hierarchy  
+- Files organized for maintainability:
+  - `directory.html` → main page  
+  - `styles/directory.css` → styling  
+  - `scripts/directory.js` → functionality  
+  - `data/members.json` → JSON source  
+  - `images/` → member images  
+- Future plan: toggle between **grid and list views**  
+
+**File Structure:**
+
+/wdd231
+/chamber
+directory.html
+/styles
+directory.css
+/scripts
+directory.js
+/data
+members.json
+/images
+(member images)
+
+
+**How to Run:**
+
+1. Clone the `wdd231` repository.  
+2. Open `chamber/directory.html` in a browser.  
+3. Keep `/styles`, `/scripts`, `/data`, `/images` inside the `chamber` folder.  
+
+</details>
+
+---
+
+## Author  
+
+**Elemide Joshua Damilare** | Nigeria  

@@ -130,7 +130,9 @@ A **directory page** for a Chamber of Commerce. Built for mobile & desktop. Fetc
   - `scripts/directory.js` → functionality  
   - `data/members.json` → JSON source  
   - `images/` → member images  
-- Future plan: toggle between **grid and list views**  
+  - **Added List View Toggle:** Implemented a button to switch between grid and list view for better content display options
+  - **Page Content Refresh:** Enabled automatic refresh of page content to ensure the latest data is displayed
+
 
 **File Structure:**
 
@@ -152,6 +154,12 @@ members.json
 1. Clone the `wdd231` repository.  
 2. Open `chamber/directory.html` in a browser.  
 3. Keep `/styles`, `/scripts`, `/data`, `/images` inside the `chamber` folder.  
+
+
+**Future Improvements:**  
+
+- **Accessibility Improvements:** Continued work on accessibility features to enhance usability, focus states, and keyboard navigation support.  
+- Optional animations/transitions 
 
 </details>
 

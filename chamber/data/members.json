@@ -80,6 +80,26 @@
       "membershipLevel": 3,
       "industry": "Hospitality",
       "description": "Luxury hotel and event center in Lagos."
-    }
+    },
+    {
+      "name": "HoneyLand School",
+      "address": "4 Oluade Way, Isolo, Lagos, Nigeria",
+      "phone": "+234 803 719 4970",
+      "website": "https://honeylandschools.ng",
+      "image": "../chamber/images/honeyland-logo.png",
+      "membershipLevel": 2,
+      "industry": "School & College",
+      "description": "Honeyland School is a private Lagos school focusing on academics and character development."
+    },
+    {
+      "name": "MTN Nigeria",
+      "address": "Ikoyi Link Bridge, Lagos, Nigeria",
+      "phone": "+234 180 6000",
+      "website": "https://www.mtnonline.com",
+      "image": "../chamber/images/mtn-logo.svg",
+      "membershipLevel": 3,
+      "industry": "Telecommunications",
+      "description": "Leading telecom company in Nigeria providing mobile, data, and digital services nationwide."
+    }      
   ]
 }

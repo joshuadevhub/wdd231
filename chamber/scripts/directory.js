@@ -41,7 +41,9 @@ const displayData = (companies) => {
   companies.forEach((company) => {
     const section = document.createElement("section");
     const img = document.createElement("img");
+    const companyName = document.createElement("p");
     const firstParagraph = document.createElement("p");
+    firstParagraph.classList.add("hidden");
     const secondParagraph = document.createElement("p");
     const websiteDetails = document.createElement("p");
     const website = document.createElement("a");
@@ -52,6 +54,8 @@ const displayData = (companies) => {
     img.width = 130;
     img.height = 100;
 
+    companyName.textContent = `${company.name}`;
+
     firstParagraph.textContent = `${company.address}`;
     secondParagraph.textContent = `${company.phone}`;
 
@@ -60,6 +64,7 @@ const displayData = (companies) => {
     website.setAttribute("target", `_blank`);
 
     section.appendChild(img);
+    section.appendChild(companyName);
     section.appendChild(firstParagraph);
     section.appendChild(secondParagraph);
     websiteDetails.appendChild(website);
@@ -75,3 +80,19 @@ const lastModification = document.querySelector("#last-modified");
 const date = new Date();
 yearElement.textContent = `\u00A9 ${date.getFullYear()}`;
 lastModification.textContent = `Last Modification: ${document.lastModified}`;
+
+
+// JavaScript For the Grid Icon
+const gridIcon = document.querySelector("#grid-btn");
+const icon = document.querySelector("#icon");
+const mainContent = document.querySelector("#list");
+
+gridIcon.addEventListener("click", () => {
+
+  let isGrid = icon.src.includes("grid-view");
+
+  icon.src = isGrid ? 'images/list-view.svg' : 'images/grid-view.svg';
+  icon.alt = isGrid ? "List View" : "Grid View";
+
+  mainContent.classList.toggle("list", isGrid);
+})

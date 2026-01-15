@@ -11,9 +11,19 @@
 
   --accent-color: #ffb703; /* Excellent for "Current" page indicators or button highlights*/
 
-  --secondary-color: #52c4e0; /* Good for hover states on links*/
+  --secondary-color: #0ac2ff;
 
   --background-color: #f8f9fa; /* current header/text color*/
+
+  --light-gray: #dddddd;           /* #ddd & #dddddd unified */
+
+  --shadow-color: #00000099;       /* overlay & box-shadow */
+
+  --list-odd-bg: #219ebc66;        /* list odd row bg */
+
+  --highlight-blue: #009ACF;       /* hover/current link for desktop */
+
+  --transparent-color: rgba(0,0,0,0);
 
   --text-font: "Open Sans", sans-serif;
 
@@ -36,7 +46,7 @@ body {
   padding: 0.8rem;
   font-family: var(--heading-font);
   gap: 10px;
-  background: #ddd;
+  background: var(--light-gray);
 }
 header img.chevron-logo {
   object-fit: cover;
@@ -72,7 +82,7 @@ header .menu-btn img,
 .overlay {
   position: fixed;
   inset: 0;
-  background-color: #00000099;
+  background-color: var(--shadow-color);
   opacity: 0;
   z-index: 900;
   pointer-events: none;
@@ -120,7 +130,7 @@ header .nav-bar .close-btn {
   border-left: 4px solid var(--secondary-color);
 }
 .nav-bar ul li.current a {
-  color: #0ac2ff;
+  color: var(--secondary-color);
 }
 .nav-bar ul li:not(.current):hover {
   border-bottom: 1px solid var(--background-color);
@@ -136,14 +146,14 @@ header .nav-bar .close-btn {
   cursor: pointer;
 }
 .nav-bar ul li a:hover {
-  color: #0ac2ff;
+  color: var(--secondary-color);
 }
 
 main {
   flex: 1;
   background-color: var(--background-color);
   margin: 1rem auto 1.5rem auto;
-  box-shadow: 2px 2px 6px #00000099;
+  box-shadow: 2px 2px 6px var(--shadow-color);
   width: 96%;
   overflow: hidden;
 }
@@ -163,7 +173,7 @@ main div#cards {
 
 main section {
   margin: 0.6rem auto;
-  box-shadow: 1px 1px 5px #00000099;
+  box-shadow: 1px 1px 5px var(--shadow-color);
   width: 98%;
   padding: 1rem;
   transition: transform 0.5s ease;
@@ -202,10 +212,10 @@ main a {
   margin: 0;
 }
 .list #cards section:nth-child(odd) {
-  background-color: #219ebc66;
+  background-color: var(--list-odd-bg);
 }
 .list #cards section:nth-child(even) {
-  background-color: #ddd;
+  background-color: var(--light-gray);
 }
 .list section {
   box-shadow: none;
@@ -240,7 +250,7 @@ main a {
 
 footer {
   width: 100%;
-  background: #dddddd;
+  background: var(--light-gray);
   padding: 1rem;
 }
 footer .info,
@@ -294,7 +304,7 @@ footer img {
     width: auto;
     height: auto;
     transform: none;
-    background: transparent;
+    background: var(--transparent-color);
     backdrop-filter: none;
     position: static;
     display: flex;
@@ -321,6 +331,9 @@ footer img {
   .nav-bar ul li:not(.current):hover {
     border-bottom: none;
   }
+  .nav-bar ul li.current a{
+    color: var(--highlight-blue);
+  }
   .nav-bar ul li.current {
     border: none;
     font-weight: bold;
@@ -333,7 +346,7 @@ footer img {
   }
 
   .nav-bar ul li a:hover {
-    color: #0ac2ff;
+    color: var(--highlight-blue);
   }
   .grid-btn {
     margin: 0;

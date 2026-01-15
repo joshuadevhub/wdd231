@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 :root {
-  /* --color-primary: #0b2a4a; /* Primary: Backgrounds, headers, buttons */
-  /* --color-secondary: #ffffff; /* Secondary: Text on navy, high contrast */
-  /* --color-accent: #ffb703; Accent: Highlights, buttons, links */
-  /* --color-text: #2c2c2c; Text: Body text on white background */
-  /* --color-light-bg: #f5f5f5; Light Background: Sections to break up navy */
 
   --primary-color: #0b2a4a; /* current header/text color*/
 
@@ -19,8 +14,6 @@
   --secondary-color: #52c4e0; /* Good for hover states on links*/
 
   --background-color: #f8f9fa; /* current header/text color*/
-
-  --text-color: #333333; /* current header/text color*/
 
   --text-font: "Open Sans", sans-serif;
 
@@ -43,7 +36,7 @@ body {
   padding: 0.8rem;
   font-family: var(--heading-font);
   gap: 10px;
-  background: #dddddd;
+  background: #ddd;
 }
 header img.chevron-logo {
   object-fit: cover;
@@ -127,7 +120,7 @@ header .nav-bar .close-btn {
   border-left: 4px solid var(--secondary-color);
 }
 .nav-bar ul li.current a {
-  color: var(--secondary-color);
+  color: #0ac2ff;
 }
 .nav-bar ul li:not(.current):hover {
   border-bottom: 1px solid var(--background-color);
@@ -143,7 +136,7 @@ header .nav-bar .close-btn {
   cursor: pointer;
 }
 .nav-bar ul li a:hover {
-  color: var(--secondary-color);
+  color: #0ac2ff;
 }
 
 main {
@@ -218,9 +211,8 @@ main a {
   box-shadow: none;
   width: 100%;
   margin: 0;
-  display: contents;
   display: grid;
-  grid-template-columns: 1.3fr 1.2fr 1.2fr;
+  grid-template-columns: 1fr 1.2fr 1.2fr;
 }
 .list section:hover {
   transform: none;
@@ -341,7 +333,7 @@ footer img {
   }
 
   .nav-bar ul li a:hover {
-    color: var(--secondary-color);
+    color: #0ac2ff;
   }
   .grid-btn {
     margin: 0;

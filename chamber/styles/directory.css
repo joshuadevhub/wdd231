@@ -16,7 +16,7 @@
 
   --accent-color: #ffb703; /* Excellent for "Current" page indicators or button highlights*/
 
-  --secondary-color: #219ebc; /* Good for hover states on links*/
+  --secondary-color: #52c4e0; /* Good for hover states on links*/
 
   --background-color: #f8f9fa; /* current header/text color*/
 
@@ -26,19 +26,18 @@
 
   --heading-font: "Montserrat", sans-serif;
 }
+
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
-  /* outline: 1px solid red; */
 }
 .header {
   width: 100%;
   display: grid;
   grid-template-columns: 24px auto 44px 44px;
-  /* color: var(--text-color); */
   border-bottom: 1px solid var(--primary-color);
   align-items: center;
   padding: 0.8rem;
@@ -151,7 +150,7 @@ main {
   flex: 1;
   background-color: var(--background-color);
   margin: 1rem auto 1.5rem auto;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 6px #00000099;
   width: 96%;
   overflow: hidden;
 }
@@ -170,9 +169,8 @@ main div#cards {
 }
 
 main section {
-  /* background-color: red; */
   margin: 0.6rem auto;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 5px #00000099;
   width: 98%;
   padding: 1rem;
   transition: transform 0.5s ease;
@@ -202,7 +200,6 @@ main a {
 
 .list {
   width: 100%;
-  /* margin: 0; */
   padding: 0;
   box-shadow: none;
   font-size: 0.9rem;
@@ -212,7 +209,7 @@ main a {
   margin: 0;
 }
 .list #cards section:nth-child(odd) {
-  background-color: rgba(33, 158, 188, 0.4);
+  background-color: #219ebc66;
 }
 .list #cards section:nth-child(even) {
   background-color: #ddd;
@@ -345,7 +342,6 @@ footer img {
 
   .nav-bar ul li a:hover {
     color: var(--secondary-color);
-    /* font-weight: bold; */
   }
   .grid-btn {
     margin: 0;

@@ -15,7 +15,7 @@
       "address": "17 Obafemi Awolowo Way, Lagos",
       "phone": "+234 803 765 4321",
       "website": "http://www.miratechnologiesng.com",
-      "image": "../chamber/images/mira-logo.png",
+      "image": "../chamber/images/mira-logo.webp",
       "membershipLevel": 2,
       "industry": "Software & Technology",
       "description": "Technology solutions and software development company providing digital services and IT support in Lagos."
@@ -45,7 +45,7 @@
       "address": "Access Bank Headquarters, Lagos",
       "phone": "+234 1 271 2000",
       "website": "https://www.accessbankplc.com",
-      "image": "../chamber/images/access-logo.png",
+      "image": "../chamber/images/access-logo.webp",
       "membershipLevel": 3,
       "industry": "Banking",
       "description": "One of Nigeria's largest commercial banks."
@@ -55,7 +55,7 @@
       "address": "Plot 7, Victoria Island, Lagos",
       "phone": "+234 1 448 9000",
       "website": "https://www.gloworld.com/ng",
-      "image": "../chamber/images/glo-logo.png",
+      "image": "../chamber/images/glo-logo.webp",
       "membershipLevel": 3,
       "industry": "Telecommunications",
       "description": "One of Nigeria's leading telecom companies, known for its distinctive green and yellow logo."
@@ -76,7 +76,7 @@
       "address": "1415 Ademola Str, Victoria Island, Lagos",
       "phone": "+234 1 277 2700",
       "website": "https://www.ekohotels.com",
-      "image": "../chamber/images/ekoHotel-logo.png",
+      "image": "../chamber/images/ekoHotel-logo.webp",
       "membershipLevel": 3,
       "industry": "Hospitality",
       "description": "Luxury hotel and event center in Lagos."
@@ -86,7 +86,7 @@
       "address": "4 Oluade Way, Isolo, Lagos, Nigeria",
       "phone": "+234 803 719 4970",
       "website": "https://honeylandschools.ng",
-      "image": "../chamber/images/honeyland-logo.png",
+      "image": "../chamber/images/honeyland-logo.webp",
       "membershipLevel": 2,
       "industry": "School & College",
       "description": "Honeyland School is a private Lagos school focusing on academics and character development."

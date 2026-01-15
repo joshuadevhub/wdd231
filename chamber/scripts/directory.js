@@ -7,13 +7,11 @@ const overLay = document.querySelector("#overlay");
 function openMenu() {
   navBar.classList.add("show");
   overLay.classList.add("active");
-  document.body.style.overflow = "hidden";
 }
 
 function closeMenu() {
   navBar.classList.remove("show");
   overLay.classList.remove("active");
-  document.body.style.overflow = "";
 }
 menuBtn.addEventListener("click", openMenu);
 closeBtn.addEventListener("click", closeMenu);
@@ -62,6 +60,7 @@ const displayData = (companies) => {
     website.textContent = `Click Here For More Details`;
     website.setAttribute("href", `${company.website}`);
     website.setAttribute("target", `_blank`);
+    website.setAttribute("rel", "noopener noreferrer");
 
     section.appendChild(img);
     section.appendChild(companyName);

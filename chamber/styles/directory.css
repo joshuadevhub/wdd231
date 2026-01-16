@@ -23,7 +23,7 @@
 
   --highlight-blue: #009ACF;       /* hover/current link for desktop */
 
-  --transparent-color: rgba(0,0,0,0);
+  --transparent-color: #00000000;
 
   --text-font: "Open Sans", sans-serif;
 
@@ -292,13 +292,18 @@ footer img {
     align-items: center;
     grid-template-areas: "logo title nav grid";
     padding: 1rem 0.5rem;
+    background-color: var(--primary-color);
   }
   .chevron-logo {
     grid-area: logo;
+    background-color: white;
+    border-radius: 50%;
+    object-fit: contain;
   }
   .header span {
     grid-area: title;
     white-space: nowrap;
+    color: var(--background-color);
   }
   .nav-bar {
     width: auto;
@@ -331,27 +336,24 @@ footer img {
   .nav-bar ul li:not(.current):hover {
     border-bottom: none;
   }
-  .nav-bar ul li.current a{
-    color: var(--highlight-blue);
-  }
+
   .nav-bar ul li.current {
     border: none;
     font-weight: bold;
   }
   .nav-bar ul li a {
     font-size: 1.2rem;
-    color: var(--primary-color);
     line-height: 1;
     transition: all 0.3s ease-in-out;
   }
 
-  .nav-bar ul li a:hover {
-    color: var(--highlight-blue);
-  }
   .grid-btn {
     margin: 0;
     grid-area: grid;
     justify-self: end;
+    background-color: white;
+    padding: 0;
+    z-index: 1000;
   }
   main div#cards {
     grid-template-columns: repeat(4, 1fr);

@@ -1,0 +1,131 @@
+/* --- Root Variables for easy customization --- */
+:root {
+  --primary-blue: #4a90e2;
+  --bg-color: #f0f4f8;
+  --card-bg: #ffffff;
+  --text-dark: #2c3e50;
+  --text-light: #5d6d7e;
+  --accent-color: #e67e22;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+}
+
+/* --- Base Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  padding: 20px;
+}
+
+/* --- Typography --- */
+h1 {
+  margin: 2rem 0;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Main Card Layout --- */
+main {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 450px; /* Limits width on desktop */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+main:hover {
+  transform: translateY(-5px);
+}
+
+main p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#current-temp {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  display: block; /* Puts temp on its own line */
+  margin-top: 0.5rem;
+}
+
+/* --- Figure & Weather Icon --- */
+figure {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#weather-icon {
+  width: 100px;
+  height: 100px;
+  background-color: #eef2f7; /* Subtle circle behind the icon */
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-transform: capitalize;
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: auto; /* Pushes footer to bottom of page */
+  padding: 2rem 0;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #dcdde1;
+}
+
+/* --- Responsiveness --- */
+
+/* For Small Phones */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  #current-temp {
+    font-size: 2rem;
+  }
+}
+
+/* For Tablets and larger */
+@media (min-width: 768px) {
+  body {
+    justify-content: center; /* Centers the card vertically on larger screens */
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}

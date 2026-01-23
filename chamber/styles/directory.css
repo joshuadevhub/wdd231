@@ -1,3 +1,5 @@
+/* -------------------------------------- General Styling --------------------------------------- */
+
 *,
 *::before,
 *::after {
@@ -151,17 +153,79 @@ header .nav-bar .close-btn {
 main {
   flex: 1;
   background-color: var(--background-color);
-  margin: 1rem auto 1.5rem auto;
+  margin: 0 auto;
   box-shadow: 2px 2px 6px var(--shadow-color);
-  width: 96%;
+  width: 100%;
   overflow: hidden;
 }
 h1 {
-  text-align: center;
+  /* text-align: center; */
   margin: 0;
   padding: 0.5rem;
   color: var(--primary-color);
 }
+
+/* ---------------------------------- Styling For the Home Page --------------------------------- */
+main picture {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+main picture img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+section .event {
+  width: 96%;
+  background: #ddd;
+  margin: 0 auto 1.5rem auto;
+  border: none;
+  /* border-radius: 12px; */
+  overflow: auto;
+  box-shadow: 0 4px 20px #00000014;
+}
+.event h2 {
+  background: var(--primary-color);
+  color: var(--accent-color);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.6rem;
+  width: 100%;
+  font-family: var(--heading-font);
+}
+section .event p,
+.weather-grid {
+  padding: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.weather-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+}
+.current-weather .image img {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.weather span {
+  display: block;
+}
+#forecast-days p{
+  line-height: 0.8;
+  font-size: 1.4rem;
+}
+
+/* ---------------------------------Styling For the Directory Page------------------------------- */
+
 main div#cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -170,22 +234,22 @@ main div#cards {
   margin: 0.8rem;
 }
 
-main section {
+main .section {
   margin: 0.6rem auto;
   box-shadow: 1px 1px 5px var(--shadow-color);
   width: 98%;
   padding: 1rem;
   transition: transform 0.5s ease;
 }
-main section:hover {
+main .section:hover {
   transform: scale(1.05);
 }
 
-section p {
+.section p {
   text-align: center;
   padding-bottom: 0.5rem;
 }
-main img {
+main .img {
   display: block;
   margin: 0.3rem auto 1rem auto;
   object-fit: contain;
@@ -198,7 +262,7 @@ main a {
   color: var(--primary-color);
 }
 
-/* ...................................... CSS For the List View ..................................... */
+/* ..............................---.... CSS For the List View ................................. */
 
 .list {
   width: 100%;
@@ -210,27 +274,27 @@ main a {
   display: block;
   margin: 0;
 }
-.list #cards section:nth-child(odd) {
+.list #cards .section:nth-child(odd) {
   background: var(--list-odd-bg);
 }
-.list #cards section:nth-child(even) {
+.list #cards .section:nth-child(even) {
   background: var(--bg-muted);
 }
-.list section {
+.list .section {
   box-shadow: none;
   width: 100%;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1.2fr 1.2fr;
 }
-.list section:hover {
+.list .section:hover {
   transform: none;
 }
-.list section * {
+.list .section * {
   overflow-wrap: anywhere;
   white-space: normal;
 }
-.list img {
+.list .img {
   display: none;
 }
 .list p {
@@ -245,6 +309,8 @@ main a {
 .list p.hidden {
   display: none;
 }
+
+/* ------------------------------------ Styling For The Footer ---------------------------------- */
 
 footer {
   width: 100%;
@@ -278,7 +344,7 @@ footer img {
   height: 28px;
 }
 
-/* ...................................... CSS For the Larger Screen ..................................... */
+/* .......................---......... CSS For the Larger Screen ................................ */
 
 @media (min-width: 38rem) {
   .menu-btn,
@@ -358,7 +424,7 @@ footer img {
 
   /* ................................. CSS For the List View For Larger view............................ */
 
-  .list section {
+  .list .section {
     grid-template-columns: auto auto auto auto;
   }
   .list p.hidden {

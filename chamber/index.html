@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD231 | Chevron Chamber of Commerce Directory</title>
+    <title>Chevron | Empowering Local Businesses & Community Growth</title>
 
-    <meta name="description" content="Explore the Chevron Chamber directory to find local businesses, trade partners, and community resources in Lagos.">
+    <meta name="description" content="Welcome to Chevron. We connect local businesses, foster community growth, and provide resources and events to help businesses thrive.">
     <meta name="author" content="Elemide Joshua Damilare">
 
     <!-- Favicon -->
@@ -21,17 +21,17 @@
 
 
     <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:title" content="Chevron Chamber of Commerce Directory">
-    <meta property="og:description" content="Discover the businesses and community resources of Chevron, Lagos. Connect with local partners and explore the full directory of the Chamber of Commerce.">
+    <meta property="og:title" content="Chevron | Connecting Businesses and Community">
+    <meta property="og:description" content="Join Chevron to network, grow your business, and engage with the local community.">
     <meta property="og:image" content="https://joshuadevhub.github.io/wdd231/chamber/images/chamber-og-image.webp">
-    <meta property="og:url" content="https://joshuadevhub.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://joshuadevhub.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
 
     <!-- External Link for CSS and javaScript -->
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
 
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/main.js" defer></script>
     <script src="scripts/nav-footer.js" defer></script>
   </head>
 
@@ -66,12 +66,60 @@
       </nav>
     </header>
 
-    <h1>Business Directory</h1>
+    <!-- <h1> Home</h1> -->
 
-    <main id="list">
-      <div id="cards">
+    <main>
+      <picture>
+        <source srcset="images/chevron-desktop-banner.webp" media="(min-width: 768px)"></source>
+        <img src="images/chevron-mobile-banner.webp" alt="Chevron Home Banner" width="720" height="480">
+      </picture>
 
-      </div>
+      <h1>Home</h1>
+
+      <section class="current-details">
+        <section class="event">
+          <h2>Events</h2>
+          <p>Join us for “Local Business Connect 2026” on Friday, March 15, from 10:00 AM to 4:00 PM at the City Hall Conference Center, a must-attend event for local business owners, entrepreneurs, and community partners. This is your opportunity to connect with like-minded professionals, gain practical insights, and showcase your business to the community. Enjoy interactive workshops on digital marketing, funding strategies, and customer engagement, hear inspiring stories from successful entrepreneurs, and take part in a dynamic business showcase. With networking sessions over coffee, professional headshots, door prizes, and certificates of participation, this event is designed to help you grow your business, expand your network, and get noticed in the local market. Don’t miss your chance to be part of the future of local business!</p>
+        </section>
+
+        <section class="current-weather event">
+          <h2>Current Weather</h2>
+
+          <div class="weather-grid">
+            <div class="image">
+              <img src="" alt="" id="weather-icon">
+            </div>
+  
+            <div class="weather">
+              <span id="temp"></span>
+              <span id="desc"></span>
+              <span id="high"></span>
+              <span id="low"></span>
+              <span id="humidity"></span>
+              <span id="sunrise"></span>
+              <span id="sunset"></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="weather-forcast event">
+          <h2>Weather Forecast</h2>
+
+          <div id="forecast-days">
+            
+          </div>
+        </section>
+
+      </section>
+
+
+
+
+      <section class="business-profile">
+
+      </section>
+
+
     </main>
 
 

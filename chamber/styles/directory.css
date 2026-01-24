@@ -128,9 +128,7 @@ header .nav-bar .close-btn {
   padding: 1.5rem 2rem;
 }
 .nav-bar ul li.current {
-  border-left: 4px solid var(--secondary-color);
-  background-color: rgba(255, 255, 255, 0.1); 
-  border-radius: 4px 0 0 4px; 
+  border-left: 4px solid var(--secondary-color); 
 }
 .nav-bar ul li.current a {
   color: var(--secondary-color);

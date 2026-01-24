@@ -37,7 +37,7 @@ function displayData(data) {
   // javaScript For The Weather Icon
   const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
   weatherIcon.setAttribute("src", `${iconSrc}`);
-  weatherIcon.setAttribute("alt", `${data.main.description} Image`);
+  weatherIcon.setAttribute("alt", `${data.weather[0].description} Icon`);
 
   // JavaScript For the Sunrise and Sunset
   const sunrise = new Date(data.sys.sunrise * 1000);

@@ -215,3 +215,15 @@ function displayCompanyData(companies) {
 getCurrentWeather();
 getThreeDayForecast();
 fetchCompanyData();
+
+// javaScript for the image Slide
+const slides = document.querySelectorAll(".slide");
+let current = 0;
+
+const showNextSlide = () => {
+  slides[current].classList.remove("active");
+  current = (current + 1) % slides.length;
+  slides[current].classList.add("active")
+}
+
+setInterval(showNextSlide, 6000);

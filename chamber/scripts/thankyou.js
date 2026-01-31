@@ -2,7 +2,7 @@ const submittedDetails = document.querySelector("#submission-details");
 const getString = new URLSearchParams(window.location.search);
 
 const firstName = getString.get("first_name");
-const lastName = getString.get("given-name");
+const lastName = getString.get("last_name");
 const email = getString.get("email");
 const PhoneNumber = getString.get("phone");
 const orgName = getString.get("org_name");

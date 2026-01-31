@@ -13,8 +13,8 @@ cards.forEach((card, index) => {
 
 // javaScript For The Modal Box
 const modalOverlay = document.querySelector(".modal-overlay");
-const openModalButtons = document.querySelectorAll(".btn-secondary");
-const closeModalButton = document.querySelectorAll(".btn-close");
+const openModalButtons = document.querySelectorAll(".modal-open");
+const closeModalButton = document.querySelectorAll(".modal-close");
 
 openModalButtons.forEach((modalButton) => {
   modalButton.addEventListener("click", () => {

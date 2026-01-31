@@ -55,10 +55,10 @@
       <nav id="nav-bar" class="nav-bar">
         <button class="close-btn" id="close-btn" aria-label="Toggle List View"><img src="images/cross.svg" alt="Close Button" width="32" height="32"></button>
         <ul>
-          <li class="current"><a href="#">Home</a></li>
+          <li class="current"><a href="index.html">Home</a></li>
           <li><a href="#">Discover</a></li>
-          <li><a href="#">Directory</a></li>
-          <li><a href="#">Join</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Podcast</a></li>
           <li><a href="#">Events</a></li>
@@ -85,7 +85,7 @@
 
             <div class="form-content">
               <label for="last-name">Last Name *</label>
-              <input type="text" title="Applicant Last Name" name="family-name" autocomplete="given-name" id="last-name" required>
+              <input type="text" title="Applicant Last Name" name="last_name" autocomplete="family-name" id="last-name" required>
               <!-- <p class="error-message"></p> -->
             </div>
 
@@ -150,7 +150,7 @@
           <input type="hidden" name="timestamp" id="timestamp">
 
           <div class="form-actions">
-            <input type="submit" value="Submit Application" class="btn-submit">
+            <input type="submit" value="Join Chevron" class="form-submit">
           </div>
         </form>
 
@@ -163,25 +163,25 @@
             <article class="membership-card animate-in" id="card-np">
               <h3>NP Membership</h3>
               <p>Ideal for non-profit organizations and individual contributors.</p>
-              <button type="button" class="btn-secondary" data-modal="modal-np">View Benefits</button>
+              <button type="button" class="modal-open" data-modal="modal-np">View Benefits</button>
             </article>
 
             <article class="membership-card animate-in" id="card-bronze">
               <h3>Bronze Membership</h3>
               <p>For growing businesses looking to network and expand.</p>
-              <button type="button" class="btn-secondary" data-modal="modal-bronze">View Benefits</button>
+              <button type="button" class="modal-open" data-modal="modal-bronze">View Benefits</button>
             </article>
 
             <article class="membership-card animate-in" id="card-silver">
               <h3>Silver Membership</h3>
               <p>Enhanced visibility and professional training opportunities.</p>
-              <button type="button" class="btn-secondary" data-modal="modal-silver">View Benefits</button>
+              <button type="button" class="modal-open" data-modal="modal-silver">View Benefits</button>
             </article>
 
             <article class="membership-card animate-in" id="card-gold">
               <h3>Gold Membership</h3>
               <p>Maximum exposure, spotlight features, and premium event access.</p>
-              <button type="button" class="btn-secondary" data-modal="modal-gold">View Benefits</button>
+              <button type="button" class="modal-open" data-modal="modal-gold">View Benefits</button>
             </article>
           </div>
         </aside>
@@ -199,7 +199,7 @@
           <li>Monthly newsletter</li>
           <li>Basic directory listing</li>
         </ul>
-        <button class="btn-close">Close</button>
+        <button class="modal-close">Close</button>
       </dialog>
 
       <!-- Modal: Bronze -->
@@ -211,7 +211,7 @@
           <li>10% discount on training</li>
           <li>Enhanced directory listing</li>
         </ul>
-        <button class="btn-close">Close</button>
+        <button class="modal-close">Close</button>
       </dialog>
 
       <!-- Modal: Silver -->
@@ -223,7 +223,7 @@
           <li>Free admission to 2 training sessions</li>
           <li>Ad space in monthly newsletter</li>
         </ul>
-        <button class="btn-close">Close</button>
+        <button class="modal-close">Close</button>
       </dialog>
 
       <!-- Modal: Gold -->
@@ -236,7 +236,7 @@
           <li>VIP seating at annual events</li>
           <li>Unlimited professional training</li>
         </ul>
-        <button class="btn-close">Close</button>
+        <button class="modal-close">Close</button>
       </dialog>
 
     </main>

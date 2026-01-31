@@ -1,5 +1,4 @@
 /* -------------------------------------- General Styling --------------------------------------- */
-
 *,
 *::before,
 *::after {
@@ -159,13 +158,11 @@ main {
   flex: 1;
   background-color: var(--background-color);
   margin: 0 auto;
-  /* box-shadow: 2px 2px 6px var(--shadow-color); */
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-h1 {
-  /* text-align: center; */
+main h1 {
   margin: 0;
   padding: 0.5rem;
   color: var(--primary-color);
@@ -199,8 +196,6 @@ h1 {
   position: absolute;
   top: 80%;
   right: 4%;
-  /* transform: translate(-50%, -50%); */
-  /* background-color: white; */
   z-index: 2;
 }
 .text-overlay .cta{
@@ -232,38 +227,6 @@ h1 {
     transform: scale(1)translate(0, 0);
   }
 }
-/* main picture {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
-}
-main picture img {
-  object-fit: cover;
-  display: block;
-  width: 100%;
-  height: auto;
-}
-main a.cta{
-  display: inline-block;
-  padding: 12px 16px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  border: none;
-  background-color: var(--accent-color);
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 11.5%;
-  right: 4%;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-main a.cta:hover{
-  background-color: rgba(255, 183, 3, 0.85);
-  transform: translateY(-2px);
-} */
 .current-details,
 .business-profile {
   display: grid;
@@ -408,17 +371,6 @@ textarea {
   outline: none;
   font-size: 1rem;
 }
-/* .form-content.error input{
-  border: 1px solid red;
-}
-.form-content.success input{
-  border: 1px solid green;
-}
-.error-message{
-  color: red;
-  font-size: 0.8rem;
-  margin: 2px 0 0 5px;
-} */
 
 .membership-selection {
   border: 2px solid var(--bg-muted);
@@ -486,12 +438,17 @@ form > .org-desc{
 
 /* Card Animation */
 @keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { 
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); }
 }
 
 .animate-in {
-    animation: slideUp 0.8s ease forwards;
+  animation: slideUp 0.8s ease forwards;
 }
 
 /* Cards */
@@ -597,9 +554,7 @@ dialog.modal {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 10px 20px var(--shadow-color);
-  /* margin-top: 2rem; */
   width: 96%;
-  /* margin: 1rem auto; */
 }
 .summary-card p{
   margin: 1rem 0;
@@ -618,10 +573,6 @@ dialog.modal {
   width: 50%;
   text-align: center;
 }
-
-/* .details-list ul li:nth-child(odd) {
-    background-color: var(--list-odd-bg);
-} */
 
 .accent-text { 
   color: var(--primary-color); 

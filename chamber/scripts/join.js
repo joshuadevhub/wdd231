@@ -22,6 +22,7 @@ openModalButtons.forEach((modalButton) => {
     const modal = document.getElementById(modalId);
     modal.showModal();
     modalOverlay.style.display = "block";
+    
   });
 });
 

@@ -86,8 +86,14 @@
   }
   .card figure{
     grid-area: image;
+    transform: scale(1);
+    overflow: hidden;
+    transition: transform 1s ease;
   }
 
+  .card figure:hover{
+    transform: scale(1.2);
+  }
   .card p{
     grid-area: desc;
   }
@@ -96,5 +102,6 @@
   }
   .card button{
     grid-area: button;
+    cursor: pointer;
   }
 }

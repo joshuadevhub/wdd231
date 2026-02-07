@@ -80,6 +80,11 @@
   }
   .card figure{
     grid-area: image;
+    transform: scale(1);
+  }
+  .card figure:hover{
+    transform: scale(1.2);
+    transition: transform 1s ease;
   }
 
   .card p{
@@ -90,5 +95,6 @@
   }
   .card button{
     grid-area: button;
+    cursor: pointer;
   }
 }

@@ -40,6 +40,7 @@ body {
   flex-direction: column;
   position: relative;
   width: 100%;
+  font-family: var(--text-font);
 }
 .header {
   width: 100%;
@@ -170,6 +171,7 @@ main h1 {
   margin: 0;
   padding: 0.5rem;
   color: var(--primary-color);
+  font-family: var(--heading-font);
 }
 
 /* ---------------------------------- Styling For the Home Page --------------------------------- */
@@ -454,6 +456,7 @@ form > .org-desc{
 .membership-card h3{
   text-align: center;
   margin-bottom: 0.5rem;
+  font-family: var(--heading-font);
 }
 
 .modal-overlay {
@@ -473,6 +476,7 @@ dialog.modal {
   background: var(--white-color);
   padding: 1.5rem;
   border: none;
+  outline: none;
   width: 96%;
   z-index: 101;
   border-radius: 8px;
@@ -649,119 +653,75 @@ footer img {
   height: 28px;
 }
 
-/* .......................---......... CSS For the Larger Screen ................................ */
+/* ---------------------------------Styling For the Discover Page------------------------------- */
 
-@media (min-width: 38rem) {
-  .menu-btn,
-  .close-btn {
-    display: none;
-  }
-  .header {
-    grid-template-columns: auto 1fr auto auto;
-    align-items: center;
-    grid-template-areas: "logo title nav grid";
-    padding: 1rem 0.5rem;
-  }
-  .chevron-logo {
-    grid-area: logo;
-  }
-  .header span {
-    grid-area: title;
-    white-space: nowrap;
-  }
-  .nav-bar {
-    width: auto;
-    height: auto;
-    transform: none;
-    backdrop-filter: none;
-    position: static;
-    display: flex;
-    align-items: center;
-    justify-self: start;
-    grid-area: nav;
-    padding: 0;
-    margin: 0;
-    margin-right: 0.5rem;
-  }
-  .nav-bar ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 0;
-  }
-  .nav-bar ul li {
-    padding: 0;
-    border: none;
-    padding: 0.3rem;
-  }
-  .nav-bar ul li:not(.current):hover {
-    border-bottom: none;
-  }
-
-  .nav-bar ul li.current {
-    border: none;
-    font-weight: bold;
-  }
-  .nav-bar ul li a {
-    font-size: 1.2rem;
-    line-height: 1;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .grid-btn {
-    margin: 0;
-    grid-area: grid;
-    justify-self: end;
-  }
-  main div#cards,  .list .section {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  footer,  .business-profile  {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  footer .social {
-    height: 100%;
-    margin-top: -0%;
-  }
-
-  .list p.hidden {
-    display: block;
-  }
-  .list {
-    font-size: 1rem;
-  }
-
-  .current-details {
-    grid-template-columns: 2fr 1fr 1fr;
-  }
-
-  section .event p{
-    line-height: 1;
-    font-size: 1.2rem;
-  } 
-  main a.cta{
-    top: 40%;
-  }
-  .hero-slider{
-    height: 100vh;
-  }
-  .text-overlay{
-    top: 85%;
-  }
-  .form-section{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    justify-content: center;
-  }
-  .cards-section h2{
-    margin-top: -3rem;
-  }
-  .card-list{
-    margin-top: 4.5rem;
-  }
+/* CARD COMPONENT BASE */
+.card{
+  background-color: var(--bg-muted);
+  /* align-items: center; */
+  width: 96%;
+  margin: 2rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 10px 20px var(--shadow-color);
+  grid-template-areas: 
+  "title"
+  "image"
+  "desc"
+  "address"
+  "button"
+  ;
 }
+.card h2{
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.6rem;
+  grid-area: title;
+  font-family: var(--heading-font);
+}
+.card figure{
+  width: 100%;
+  height: 100%;
+  display: block;
+  grid-area: image;
+}
+.card figure img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+}
+.card p, .card address{
+  padding: 0.7rem;
+}
+.card p{
+  grid-area: desc;
+}
+.card address{
+  grid-area: address;
+}
+.card button {
+  width: 94%;
+  display: block;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 1rem .85rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  border: none;
+  grid-area: button;
+}
+
+#visit-message{
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
 
 @media (max-width: 360px) {
   .header span {

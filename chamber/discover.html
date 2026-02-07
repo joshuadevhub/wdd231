@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD231 | Chevron Chamber of Commerce Directory</title>
+    <title>Discover | Explore Local Businesses & Community Opportunities</title>
 
-    <meta name="description" content="Explore the Chevron Chamber directory to find local businesses, trade partners, and community resources in Lagos.">
+    <meta name="description" content="Discover the vibrant world of local businesses and community initiatives. Explore resources, events, and opportunities designed to help businesses grow and communities thrive.">
     <meta name="author" content="Elemide Joshua Damilare">
 
     <!-- Favicon -->
-    <link rel="icon" href="../favicon/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-32x32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png"/>
+    <link rel="icon" href="../favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,18 +21,19 @@
 
 
     <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:title" content="Chevron Chamber of Commerce Directory">
-    <meta property="og:description" content="Discover the businesses and community resources of Chevron, Lagos. Connect with local partners and explore the full directory of the Chamber of Commerce.">
+    <meta property="og:title" content="Chevron | Explore Local Businesses & Community Opportunities">
+    <meta property="og:description" content="Discover the vibrant world of local businesses and community initiatives.">
     <meta property="og:image" content="https://joshuadevhub.github.io/wdd231/chamber/images/chamber-og-image.webp">
-    <meta property="og:url" content="https://joshuadevhub.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://joshuadevhub.github.io/wdd231/chamber/discover.html">
     <meta property="og:type" content="website">
 
     <!-- External Link for CSS and javaScript -->
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
 
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
     <script src="scripts/nav-footer.js" defer></script>
   </head>
 
@@ -67,12 +68,15 @@
       </nav>
     </header>
 
-    <h1>Business Directory</h1>
+    <main>
 
-    <main id="list">
-      <div id="cards">
+      <h1>Discover</h1>
 
-      </div>
+      <section id="card-container">
+      </section>
+
+      <p id="visit-message"></p>
+
     </main>
 
 
@@ -110,6 +114,7 @@
         <p><span id="year-element"></span> | Chevron Chamber of Commerce | Nigeria</p>
         <p id="last-modified"></p>
       </div>
+
     </footer>
     
   </body>

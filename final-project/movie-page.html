@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Movies</title>
+
+    <meta name="description" content="CineScope is a movie discovery website that helps users explore popular movies and TV shows using data from the TMDB API.">
+    <meta name="author" content="Elemide Joshua Damilare" />
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script type="module" src="scripts/movie-page.js"></script>
+    <!-- <script type="module" src="scripts/nav-bar.js"></script> -->
+  </head>
+
+  <body>
+
+    <header>
+
+      <div class="nav-bar">
+        <img src="images/Cine Scope Logo.webp" alt="Cine Scope Logo" class="logo"/>
+        <span class="text">Cine Scope</span>
+        <img src="images/menu-burger.svg" alt="Menu Icon" class="menu-icon" id="menu-icon"/>
+      </div>
+
+      <nav class="side-bar" id="side-bar">
+        <img src="images/cross.svg" alt="Close Icon" class="close-icon" id="close-icon"/>
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="movie-page.html">Explore</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+      <div class="search-input">
+        <input type="text" placeholder="Search Input ...">
+        <img src="images/search-icon.svg" alt="Search Icon">
+      </div>
+
+      <section class="filter-options">
+
+        <div class="filter-header">
+          <h4>Filters</h4>
+          <span>clear All</span>
+        </div>
+
+        <div class="filter-grid">
+          <div class="filter-genre filter-option">
+            <label for="genre-filter">Genre</label>
+            <select name="all-genre" id="genre-filter">
+              <option value="">All Genres</option>
+              <option value="28">Action</option>
+              <option value="35">Comedy</option>
+              <option value="18">Drama</option>
+              <option value="27">Horror</option>
+              <option value="878">Sci-Fi</option>
+            </select>
+          </div>
+  
+          <div class="filter-option">
+            <label for="sort-filter">Sort By</label>
+            <select name="popularity" id="sort-filter">
+              <option value="popularity.desc">Popularity</option>
+              <option value="release_date.desc">Newest</option>
+              <!-- <option value="release-year">Release Date</option> -->
+              <option value="vote_average.desc">Rating</option>
+              <!-- <option value="title">Title (A - Z)</option> -->
+            </select>
+          </div>
+  
+          <div class="filter-option">
+            <label for="year-filter">Release Year</label>
+            <select name="all-years" id="year-filter">
+              <option value="2026">2026</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+            </select>
+          </div>
+        </div>
+
+
+      </section>
+
+
+      <section class="movie-sections">
+
+        <div class="filter-header">
+          <h2>Popular Movies</h2>
+          <span>248 results</span>
+        </div>
+
+        <div class="movie-container" id="movie-container">
+
+          <!-- <div class="movie-card">
+            <div class="image"></div>
+            <p class="movie-name">Quantum Paradox</p>
+            <div class="rating filter-header">
+              <span id="movie-year">2023</span>
+
+              <div class="filter-header">
+                <img src="images/rating-star.svg" alt="Rating Icon">
+                <span id="movie-rating">9.1</span>
+              </div>
+
+            </div>
+          </div> -->
+
+          </div>
+
+      </section>
+
+      <div class="overlay"></div>
+    </main>
+
+
+    <footer>
+      <div class="footer-section asset">
+        <div class="logos">
+          <img src="images/Cine Scope Logo.webp" alt="CineScope Logo" class="logo">
+          <span>CineScope</span>
+        </div>
+        <p>Your ultimate destination for discovering movies and TV Shows</p>
+
+        <div class="reference">
+          <span>This products uses the TMDB API but is not endorsed or certified by TMDB</span>
+        </div>
+      </div>
+
+
+      <div class="footer-section links">
+
+        <p>Quick Links</p>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">API Documentation</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-section social-links">
+
+        <div class="socials">
+          <a href="#">          
+            <img src="images/facebook.svg" alt="Facebook Icon">
+          </a>
+
+          <a href="#">
+            <img src="images/github.svg" alt="Github Icon">
+          </a>
+
+          <a href="#">
+            <img src="images/linkedin.svg" alt="Linkedin Icon">
+          </a>
+
+          <a href="#">
+            <img src="images/twitter-x.svg" alt="Twitter Icon">
+          </a>
+
+        </div>
+
+        <p>@2024 CineScope. All right reserved</p>
+      </div>
+    </footer>
+
+  </body>
+
+</html>

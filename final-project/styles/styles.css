@@ -1,0 +1,631 @@
+:root {
+  /* --- BACKGROUND COLORS --- */
+  /* Deep black for main background */
+  --bg-main: #0b0b0b;
+  /* Slightly lighter gray for cards and section backgrounds */
+  --bg-surface: #161616;
+  /* Even lighter gray for hover states on cards */
+  --bg-surface-hover: #1f1f1f;
+
+  /* --- BRAND / ACTION COLORS --- */
+  /* Main Brand Red: Optimized for contrast against black */
+  --primary-red: #e50914;
+  /* Darker Red: Used for buttons to make white text pass 4.5:1 contrast */
+  --btn-red: #d1111c;
+  /* Lighter Red: For hover states */
+  --btn-red-hover: #ff1f2b;
+
+  /* --- TEXT COLORS --- */
+  /* Pure white for headings and primary information (Contrast 21:1) */
+  --text-primary: #ffffff;
+  /* Medium gray for descriptions and metadata (Contrast 7.5:1 - Passes AAA) */
+  --text-secondary: #b3b3b3;
+  /* Darker gray for disabled text or placeholders (Contrast 4.6:1 - Passes AA) */
+  --text-muted: #8c8c8c;
+  /* Text color used inside red buttons */
+  --text-on-button: #ffffff;
+
+  /* --- BORDERS & DIVIDERS --- */
+  --border-subtle: #262626;
+  --border-focus: #e50914;
+
+  /* --- GRADIENTS --- */
+  /* Cinematic fade for movie posters */
+  --gradient-overlay: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(10, 10, 10, 0) 100%
+  );
+
+  --dialog-gradient-1: linear-gradient( 135deg, #0f0c29, #302b63, #24243e);
+  --dialog-gradient-2: linear-gradient( 135deg, #000000, #1a0000, #e50914);
+  --dialog-gradient-4: linear-gradient( 135deg, rgba(229, 9, 20, 0.6), rgba(0, 0, 0, 0.6), rgba(26, 0, 0, 0.6));
+  --dialog-gradient-3: linear-gradient( 135deg, rgba(30, 30, 30, 0.95), rgba(10, 10, 10, 0.95));
+  --dialog-box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+  display: none;            
+}
+header {
+  background-color: var(--bg-surface);
+  padding: 1rem;
+  position: relative;
+}
+header .nav-bar {
+  display: grid;
+  grid-template-columns: auto 2fr 1fr;
+  width: 100%;
+  align-items: center;
+  gap: 1px;
+}
+.logo {
+  width: 45px;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
+.nav-bar .text {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.nav-bar img.menu-icon {
+  width: 20px;
+  height: auto;
+  display: block;
+  justify-self: end;
+}
+
+.side-bar {
+  background-color: var(--bg-surface);
+  position: fixed;
+  height: 100%;
+  width: 80%;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  z-index: 999;
+  transition: transform 0.6s ease-in-out;
+  transition-delay: 0.1s;
+}
+.side-bar.active {
+  transform: translateX(0);
+}
+nav .close-icon {
+  width: 18px;
+  justify-self: end;
+  display: block;
+  height: auto;
+  margin-top: 7.8%;
+  margin-right: 5.1%;
+}
+.side-bar ul li {
+  list-style: none;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+}
+.side-bar ul li:not(.current):hover {
+  border-bottom: 1px solid var(--text-on-button);
+}
+.side-bar ul li.current {
+  margin-top: 3rem;
+  font-weight: bold;
+}
+.side-bar ul li.current a {
+  color: var(--primary-red);
+}
+.side-bar ul li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.side-bar ul li a:hover {
+  color: var(--primary-red);
+}
+.overlay {
+  position: fixed;
+  background-color: rgba(10, 10, 10, 0.7);
+  inset: 0;
+  pointer-events: none;
+  z-index: 900;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.overlay.show {
+  opacity: 1;
+}
+main{
+  position: relative;
+  flex: 1;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 25vh;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1.5s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+}
+/* .slide.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.85) 0%,
+    rgba(10, 10, 10, 0) 60%
+  );
+  pointer-events: none;
+  z-index: 1;
+} */
+
+.hero-slider .slide > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.slide-content {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  left: 0;
+  top: 6rem;
+  gap: 12px;
+  z-index: 2;
+
+  /* color: green; */
+}
+
+.slide-content img {
+  border-radius: 5px;
+  object-fit: contain;
+}
+.text {
+  display: flex;
+  flex-direction: column; /* keeps h2 and p stacked */
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.text h3, .text p {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Target only the buttons inside .text */
+.text > .text-buttons > button {
+  display: inline-flex; /* for proper alignment inside the button */
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.3rem 1.5rem;
+  background-color: var(--primary-red);
+  color: var(--text-on-button);
+  border-radius: 10px;
+  transition: background 1s ease;
+}
+.text > .text-buttons > button:hover{
+  background: var(--btn-red-hover);
+}
+
+/* Wrap buttons in a container to align horizontally */
+.text-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.text button img {
+  width: 28px;
+}
+
+.movies-container {
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+}
+.movies-container .heading,
+.arrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movies-container .popular-movie-list,
+.upcoming-movie-list {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  gap: 12px;
+  margin-top: 1rem;
+  overflow-y: hidden;
+}
+.movies-container .top-rated {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.movies-container .popular-movie-list > div,
+.upcoming-movie-list > div,
+.movies-container .top-rated > div {
+  width: 100%;
+  position: relative;
+  background: var(--border-subtle);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.movies-container .popular-movie-list > div img,
+.upcoming-movie-list > div img,
+.movies-container .top-rated > div img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.movies-container .popular-movie-list > div span,
+.upcoming-movie-list > div span,
+.movies-container .top-rated > div span {
+  width: 100%;
+  padding: 0.2rem;
+  font-size: 1.1rem;
+  background-color: var(--border-subtle);
+}
+.loader{
+  background-image: var(--dialog-gradient-2);
+  box-shadow: var(--dialog-box-shadow);
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 96%;
+  z-index: 1000;
+  color: var(--text-primary);
+  border: none;
+  animation: slideUp 1s ease forwards;
+}
+@keyframes slideUp {
+  to{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+.loader img{
+  cursor: pointer;
+}
+.loader-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+dialog .loader-header > span{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.loader-header img{
+  width: 16px;
+  height: auto;
+}
+.loader-first-section{
+  text-align: center;
+  margin-top: 0.1rem;
+}
+.loader-first-section button{
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: .55rem .85rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+.second-section{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  margin: 1rem 0;
+}
+.second-section div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.third-section{
+  width: 100%;
+  background-image: var(--dialog-gradient-4);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1.2rem;
+}
+.third-section .third-section-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.third-section-header img{
+  width: 20px;
+  height: auto;
+}
+.third-section .third-section-body{
+  display: grid;
+  grid-template-columns: 2fr 1.8fr;
+}
+.third-section-body li{
+  list-style: none;
+  padding: 0.4rem;
+}
+.third-section-body li a{
+  color: var(--text-primary);
+}
+
+/* Css Styling For the Movie Page Of CineScope */
+.search-input{
+  background-color: var(--bg-surface);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+.search-input input{
+  width: 100%;
+  padding: .65rem .75rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  flex: 1;
+}
+.search-input img{
+  /* background-color: green; */
+  width: 30px;
+  position: absolute;
+  right: 5%;
+  height: auto;
+  cursor: pointer;
+}
+.filter-options, .movie-sections{
+  /* background-color: red; */
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.filter-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+  gap: 3px;
+}
+.filter-options .filter-option{
+  /* background-color: red; */
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+.filter-genre{
+  margin-top: 1.5rem;
+}
+.filter-option label{
+  font-size: 1rem;
+  padding-bottom: 10px;
+  display: block;
+}
+.filter-option select{
+  width: 100%;
+  padding: .55rem .55rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+}
+.movie-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.movie-card{
+  background-color: var(--border-subtle);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.movie-card .image, .movie-poster img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  background-color: var(--bg-surface);
+}
+.movie-card p, .movie-card .rating{
+  padding: 0.3rem;
+}
+.filter-header img{
+  width: 15px;
+  align-self: center;
+}
+
+
+
+/* Css Styling For the Movie Page Details Of CineScope */
+.movie-info, .related-movies{
+  margin: 0 1rem;
+}
+.related-movies{
+  margin: 3rem 1rem 1rem 1rem;
+}
+.filter-rating{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  margin-top: 0.5rem;
+}
+.filter-rating img{
+  margin-top: 0.5rem;
+}
+.release-date{
+  margin: 0 0 1rem 0;
+}
+.release-date p{
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.synopsis p{
+  line-height: 1.5;
+}
+.synopsis h2, .crew h2 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.5rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.4rem;
+}
+.crew .crew-images{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.crew .crew-images img{
+  width: 80px;
+  align-self: center;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+  outline: none;
+}
+/* Button Styling */
+.actions{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.actions button {
+  background: var(--text-primary);
+  color: var(--bg-main);
+  border: none;
+  padding: 0.9rem 2.7rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 2rem;
+  text-align: center;
+  transition: background 1s ease;
+}
+
+.actions button[class='button-trailer']{
+  background: var(--btn-red);
+  color: var(--text-primary);
+  transition: background 0.5s ease;
+}
+.actions button:hover {
+  background-color: var(--btn-red-hover);
+  color: var(--text-primary);
+  outline: none;
+}
+
+
+/* Css Styling For The Footer */
+footer{
+  margin: 0.3rem 0 0 0;
+  width: 100%;
+  background-color:var(--bg-surface);
+}
+.footer-section{
+  margin: 1rem;
+  padding: 1rem;
+}
+.asset, .links{
+  border-bottom: 1px solid var(--text-muted);
+}
+.logos{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+.logos span{
+  font-size: 1.5rem;
+}
+.asset p, .asset .reference{
+  font-size: 1rem;
+  margin-top: 1.2rem;
+}
+.asset .reference{
+  border: 1px solid var(--primary-red);
+  padding: 0.7rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+.links > p{
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+}
+.links ul li{
+  list-style: none;
+  padding: 0.3rem;
+}
+.links ul li a{
+  text-decoration: none;
+  color: var(--text-primary);
+}
+.links ul li a:hover{
+  color: var(--primary-red);
+}
+.social-links{
+  text-align: center;
+}
+.social-links .socials{
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+}
+.social-links .socials img{
+  width: 24px;
+  justify-self: center;
+  cursor: pointer;
+}

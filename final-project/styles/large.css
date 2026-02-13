@@ -1,0 +1,113 @@
+@media (min-width: 64rem) {
+  header{
+    display: flex;
+    align-items: center;
+  }
+  .nav-bar .text{
+    margin-left: -25rem;
+  }
+  .side-bar{
+    position: static;
+    transform: none;
+    height: 0;
+    width: auto;
+    display: flex;
+    background: transparent;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+  .side-bar ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .side-bar ul li{
+    margin: 0;
+    padding: 0;
+    padding-left: 3rem;
+    font-size: 1.5rem;
+  }
+  .side-bar ul li.current{
+    margin: 0;
+    padding: 0;
+  }
+  .side-bar ul li:not(.current):hover {
+    border-bottom: none;
+  }
+  nav .close-icon, .nav-bar img.menu-icon {
+    display: none;
+  }
+
+
+  .hero-slider{
+    height: 60vh;
+    width: 100%;
+  }
+  .hero-slider .slide {
+    width: 100%;
+    height: 100%;
+  }
+  .hero-slider .slide > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center 10%;
+  }
+  .slide-content{
+    top: 7.1rem;
+    left: 0.4rem;
+  }
+  .slide-content .text h3{
+    font-size: 2.5rem ;
+  }
+  .slide-content .text p{
+    font-size: 1.2rem;
+  }
+
+  .popular-movie-list, .upcoming-movie-list {
+    overflow: auto;            /* or scroll if needed */
+    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none;  /* IE & Edge */
+  }
+  
+  .popular-movie-list::-webkit-scrollbar, .upcoming-movie-list::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+  }
+  .movies-container .top-rated{
+    grid-template-columns: repeat(5, 1fr);
+  }
+  footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .asset{
+    width: 400px;
+  }
+  .asset, .links{
+    border-bottom: none;
+  }
+  .social-links .socials{
+    margin-left: 0;
+  }
+  .social-links .socials img{
+    margin-left: 1rem;
+  }
+  .filter-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .filter-genre{
+    margin: 0;
+  }
+  .filter-option label{
+    margin-left: 0.5rem;
+  }
+  .movie-container{
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+}

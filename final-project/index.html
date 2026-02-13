@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CineScope | Discover Movies & TV Shows</title>
+
+    <meta
+      name="description"
+      content="CineScope is a movie discovery website that helps users explore popular movies and TV shows using data from the TMDB API."/>
+    <meta name="author" content="Elemide Joshua Damilare" />
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script type="module" src="scripts/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-bar">
+        <img src="images/Cine Scope Logo.webp" alt="Cine Scope Logo" class="logo"/>
+        <span class="text">Cine Scope</span>
+        <img src="images/menu-burger.svg" alt="Menu Icon" class="menu-icon" id="menu-icon"/>
+      </div>
+
+      <nav class="side-bar" id="side-bar">
+        <img src="images/cross.svg" alt="Close Icon" class="close-icon" id="close-icon"/>
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="movie-page.html">Explore</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="overlay"></div>
+
+    <main>
+      <section class="hero-slider" id="hero-slider" aria-live="polite">
+        <!-- <div class="slide active">
+          <img src="images/chevron-mobile-banner.webp" alt="" />
+
+          <div class="slide-content">
+            <img src="images/chevron-mobile-banner3.webp" alt="" />
+
+            <div class="text">
+              <h3>Title</h3>
+              <p>Short overview of the movie...</p>
+
+              <div class="text-buttons">
+                <button class="arrow">
+                  <img src="images/play_arrow.svg" alt="" />
+                  <span>Watch Online</span>
+                </button>
+
+                <button>More Info</button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div> -->
+      </section>
+
+      <section class="movies-container">
+        <div class="heading">
+          <h3>Popular Movie</h3>
+          <div class="arrow">
+            <span>All</span>
+            <img src="images/chevron_right.svg" alt="Right Arrow Icon" />
+          </div>
+        </div>
+
+        <div class="popular-movie-list" id="movie-list">
+          <!-- <div>
+            <div></div>
+            <span>Stranger Things</span>
+          </div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div> -->
+        </div>
+      </section>
+
+      <section class="movies-container">
+        <div class="heading">
+          <h3>Top Rated</h3>
+          <div class="arrow">
+            <span>All</span>
+            <img src="images/chevron_right.svg" alt="Right Arrow Icon" />
+          </div>
+        </div>
+
+        <div class="top-rated" id="top-rated">
+          <!-- <div>
+            <div></div>
+            <span>Stranger Things</span>
+          </div>
+
+          <div>
+            <div></div>
+            <span>Stranger Things</span>
+          </div>
+          <div>
+            <div></div>
+            <span>Stranger Things</span>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div> -->
+        </div>
+      </section>
+
+      <section class="movies-container">
+        <div class="heading">
+          <h3>Upcoming</h3>
+          <div class="arrow">
+            <span>All</span>
+            <img src="images/chevron_right.svg" alt="Right Arrow Icon" />
+          </div>
+        </div>
+
+        <div class="upcoming-movie-list" id="upcoming-list">
+          <!-- <div>
+            <div></div>
+            <span>Stranger Things</span>
+          </div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div> -->
+        </div>
+      </section>
+
+
+      <dialog class="loader" id="dialog">
+        <div class="loader-header">
+          <span>Welcome to CineScope !</span>
+          <img src="images/cross.svg" alt="Loader Close Icon" id="dialog-close">
+        </div>
+
+        <div class="loader-first-section">
+          <button type="button">Download App</button>
+          <p>Don't Show it Today</p>
+        </div>
+
+        <div class="second-section">
+          <div>
+            <img src="images/4k.svg" alt="">
+            <p>4K - HD</p>
+          </div>
+
+          <div>
+            <img src="images/ad_off.svg" alt="">
+            <p>No Ads</p>
+          </div>
+
+          <div>
+            <img src="images/cloud_download.svg" alt="">
+            <p>Offline</p>
+          </div>
+
+          <div>
+            <img src="images/workspace_premium.svg" alt="">
+            <p>Exclusive</p>
+          </div>
+        </div>
+
+        <div class="third-section">
+          <div class="third-section-header">
+            <p>Bookmark backup links</p>
+            <img src="images/content_copy.svg" alt="">
+          </div>
+
+          <div class="third-section-body">
+            <li><a href="#">moviebox.id</a></li>
+            <li><a href="#">moviebox.ph</a></li>
+            <li><a href="#">moviebox.pk</a></li>
+            <li><a href="#">moviebox.in</a></li>
+          </div>
+        </div>
+
+      </dialog>
+
+
+    </main>
+
+    <footer>
+      <div class="footer-section asset">
+        <div class="logos">
+          <img src="images/Cine Scope Logo.webp" alt="CineScope Logo" class="logo">
+          <span>CineScope</span>
+        </div>
+        <p>Your ultimate destination for discovering movies and TV Shows</p>
+
+        <div class="reference">
+          <span>This products uses the TMDB API but is not endorsed or certified by TMDB</span>
+        </div>
+      </div>
+
+
+      <div class="footer-section links">
+
+        <p>Quick Links</p>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">API Documentation</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-section social-links">
+
+        <div class="socials">
+          <a href="#">          
+            <img src="images/facebook.svg" alt="Facebook Icon">
+          </a>
+
+          <a href="#">
+            <img src="images/github.svg" alt="Github Icon">
+          </a>
+
+          <a href="#">
+            <img src="images/linkedin.svg" alt="Linkedin Icon">
+          </a>
+
+          <a href="#">
+            <img src="images/twitter-x.svg" alt="Twitter Icon">
+          </a>
+
+        </div>
+
+        <p>@2024 CineScope. All right reserved</p>
+      </div>
+
+    </footer>
+  </body>
+</html>

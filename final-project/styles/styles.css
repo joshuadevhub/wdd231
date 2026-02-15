@@ -25,6 +25,7 @@
   /* Text color used inside red buttons */
   --text-on-button: #ffffff;
 
+
   /* --- BORDERS & DIVIDERS --- */
   --border-subtle: #262626;
   --border-focus: #e50914;
@@ -59,12 +60,8 @@ body {
   color: var(--text-primary);
   display: flex;
   flex-direction: column;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
-body::-webkit-scrollbar {
-  display: none;            
-}
+
 header {
   background-color: var(--bg-surface);
   padding: 1rem;
@@ -152,7 +149,7 @@ nav .close-icon {
   opacity: 1;
 }
 main{
-  position: relative;
+  /* position: relative; */
   flex: 1;
 }
 
@@ -160,7 +157,9 @@ main{
   position: relative;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  height: 25vh;
+  /* height: 10%; */
+  aspect-ratio: 16 / 9;
+  /* overflow: hidden; */
 }
 .slide {
   position: absolute;
@@ -192,15 +191,15 @@ main{
 
 .hero-slider .slide > img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 .slide-content {
   position: absolute;
   display: flex;
   align-items: flex-end;
-  left: 0;
-  top: 6rem;
+  bottom: 0;
+  left: 0.2rem;
   gap: 12px;
   z-index: 2;
 
@@ -251,7 +250,7 @@ main{
 }
 
 .movies-container {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   padding: 0.5rem;
 }
 .movies-container .heading,
@@ -261,7 +260,34 @@ main{
   align-items: center;
 }
 
-.movies-container .popular-movie-list,
+.popular-movie-list, .upcoming-movie-list{
+  margin-top: 0.6rem;
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+.popular-movie-list > div, .upcoming-movie-list > div{
+  background-color: var(--border-subtle);
+}
+.top-rated{
+  margin-top: 0.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 12px;
+}
+.top-rated > div{
+  width: 100%;
+  background-color: var(--border-subtle);
+}
+.top-rated > div img{
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* .movies-container .popular-movie-list,
 .upcoming-movie-list {
   display: flex;
   width: 100%;
@@ -269,19 +295,23 @@ main{
   gap: 12px;
   margin-top: 1rem;
   overflow-y: hidden;
-}
-.movies-container .top-rated {
+} */
+/* .movies-container .top-rated {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
   margin-top: 1rem;
+} */
+img {
+  display: block;
+  /* max-width: 100%; */
 }
 
-.movies-container .popular-movie-list > div,
+/* .movies-container .popular-movie-list > div,
 .upcoming-movie-list > div,
 .movies-container .top-rated > div {
-  width: 100%;
+  min-width: 140px;
   position: relative;
   background: var(--border-subtle);
   border-bottom-left-radius: 5px;
@@ -289,22 +319,23 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.movies-container .popular-movie-list > div img,
+} */
+
+/* .movies-container .popular-movie-list > div img,
 .upcoming-movie-list > div img,
 .movies-container .top-rated > div img {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-}
+} */
 
-.movies-container .popular-movie-list > div span,
+/* .movies-container .popular-movie-list > div span,
 .upcoming-movie-list > div span,
 .movies-container .top-rated > div span {
   width: 100%;
   padding: 0.2rem;
   font-size: 1.1rem;
   background-color: var(--border-subtle);
-}
+} */
 .loader{
   background-image: var(--dialog-gradient-2);
   box-shadow: var(--dialog-box-shadow);
@@ -319,6 +350,7 @@ main{
   color: var(--text-primary);
   border: none;
   animation: slideUp 1s ease forwards;
+  position: fixed;
 }
 @keyframes slideUp {
   to{
@@ -472,10 +504,11 @@ dialog .loader-header > span{
 }
 .movie-card .image, .movie-poster img{
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  object-fit: cover;
+  aspect-ratio: 3 / 3;
   margin-bottom: 0.5rem;
-  background-color: var(--bg-surface);
+  object-position: center top;
+  /* background-color: var(--bg-surface); */
 }
 .movie-card p, .movie-card .rating{
   padding: 0.3rem;
@@ -566,11 +599,15 @@ dialog .loader-header > span{
 }
 
 
+/* Css Styling For the Movie Page Of CineScope */
+
+
 /* Css Styling For The Footer */
 footer{
   margin: 0.3rem 0 0 0;
   width: 100%;
   background-color:var(--bg-surface);
+  /* bottom: 0; */
 }
 .footer-section{
   margin: 1rem;

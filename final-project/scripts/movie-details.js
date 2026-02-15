@@ -28,10 +28,16 @@ async function fetchMovieDetails(id) {
 
 function displayMovie(movies) {
   let mobileHeroBanner = "https://image.tmdb.org/t/p/w300";
+  let desktopHeroBanner = "https://image.tmdb.org/t/p/w1280";
+
   // javaScript for the Hero Banner
   const heroBanner = document.querySelector("#movie-hero");
   if (window.innerWidth < 600) {
     heroBanner.setAttribute("src", `${mobileHeroBanner}${movies.backdrop_path}`);
+    heroBanner.setAttribute("alt", `${movies.original_title} Image`);
+    heroBanner.setAttribute("loading", "lazy");
+  } else {
+    heroBanner.setAttribute("src", `${desktopHeroBanner}${movies.backdrop_path}`);
     heroBanner.setAttribute("alt", `${movies.original_title} Image`);
     heroBanner.setAttribute("loading", "lazy");
   }

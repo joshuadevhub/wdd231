@@ -121,9 +121,9 @@ export function displayPopularMovie(movies) {
 export function displayTopRated(movies) {
   let posterImageUrl;
   if (window.innerWidth < 600) {
-    posterImageUrl = "https://image.tmdb.org/t/p/w185";
+    posterImageUrl = "https://image.tmdb.org/t/p/w154";
   } else {
-    posterImageUrl = "https://image.tmdb.org/t/p/w185";
+    posterImageUrl = "https://image.tmdb.org/t/p/w154";
   }
 
   const filteredTopRated = movies.filter((topRated) => {
@@ -140,7 +140,7 @@ export function displayTopRated(movies) {
 
     let topRatedText;
     if (movie.original_title.length > 17) {
-      topRatedText = `${movie.original_title.slice(0, 20)}...`;
+      topRatedText = `${movie.original_title.slice(0, 15)}...`;
     } else {
       topRatedText = movie.original_title;
     }

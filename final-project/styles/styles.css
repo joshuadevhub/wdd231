@@ -69,10 +69,10 @@ header {
 }
 header .nav-bar {
   display: grid;
-  grid-template-columns: auto 2fr 1fr;
+  grid-template-columns: auto auto 1fr;
   width: 100%;
   align-items: center;
-  gap: 1px;
+  gap: 10px;
 }
 .logo {
   width: 45px;
@@ -161,6 +161,7 @@ main{
   aspect-ratio: 16 / 9;
   /* overflow: hidden; */
 }
+
 .slide {
   position: absolute;
   inset: 0;
@@ -502,7 +503,14 @@ dialog .loader-header > span{
   margin: 1rem 0;
   cursor: pointer;
 }
-.movie-card .image, .movie-poster img{
+
+.movie-poster > img{
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+}
+.movie-card .image{
   width: 100%;
   object-fit: cover;
   aspect-ratio: 3 / 3;
@@ -599,9 +607,56 @@ dialog .loader-header > span{
 }
 
 
-/* Css Styling For the Movie Page Of CineScope */
-
-
+/* Css Styling For the Thank You Page Of CineScope */
+.summary-card{
+  background-color: var(--text-primary);
+  margin: 2rem auto;
+  display: block;
+  width: 90%;
+  border-radius: 10px;
+  color: var(--bg-main);
+  padding: 1.5rem;
+}
+.summary-card img{
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.summary-card h1{
+  margin: 1rem 0 0.5rem 0;
+}
+.summary-card h1, .summary-card p{
+  text-align: center;
+}
+.summary-card p{
+  margin: 0;
+  padding: 0;
+}
+.form-details{
+  background-color: #ddd;
+  margin: 1rem 0;
+  padding: 0.6rem;
+  border-radius: 8px;
+}
+.form-details .user-detail{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+}
+.summary-card .form-actions{
+  background-color: var(--primary-red);
+  padding: 1rem .45rem;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+.summary-card .form-actions a{
+  color: var(--text-on-button);
+  text-decoration: none;
+}
 /* Css Styling For The Footer */
 footer{
   margin: 0.3rem 0 0 0;

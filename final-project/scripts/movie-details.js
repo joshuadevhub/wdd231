@@ -127,7 +127,7 @@ async function fetchRelatedMovies() {
 }
 
 function displayRelatedMovies(movies) {
-  let mobileHeroBanner = "https://image.tmdb.org/t/p/w200";
+  let mobileHeroBanner = "https://image.tmdb.org/t/p/w154";
 
   const relatedMoviesContainer = document.querySelector("#related-movies");
   relatedMoviesContainer.innerHTML = '';
@@ -137,11 +137,10 @@ function displayRelatedMovies(movies) {
     const img = document.createElement("img");
     const title = document.createElement("span");
 
-    if (window.innerWidth < 600) {
-      img.setAttribute("src", `${mobileHeroBanner}${movie.poster_path}`);
-      img.setAttribute("alt", `${movie.original_title} Image`);
-      img.setAttribute("loading", "lazy");
-    }
+    img.setAttribute("src", `${mobileHeroBanner}${movie.poster_path}`);
+    img.setAttribute("alt", `${movie.original_title} Image`);
+    img.setAttribute("loading", "lazy");
+
     let titleText;
     if (movie.original_title.length > 25) {
       titleText = `${movie.original_title.slice(0, 22)}....`;

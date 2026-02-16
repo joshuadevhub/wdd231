@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Application Submitted</title>
+
+    <meta name="description" content="Thank you for applying to CineScope Movie Site. Your application has been successfully submitted.">
+    <meta name="author" content="Elemide Joshua Damilare">
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="../favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-16x16.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-32x32.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png"/> -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"/>
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Thank You | Application Submitted">
+    <meta property="og:description" content="Thank you for submitting your application to CineScope Movie Site. Your request has been successfully received.">
+    <meta property="og:image" content="https://joshuadevhub.github.io/wdd231/chamber/images/chamber-og-image.webp">
+    <meta property="og:url" content="https://joshuadevhub.github.io/wdd231/final-project/thank-you.html"/>
+    <meta property="og:type" content="website">
+
+    <!-- External Link for CSS and javaScript -->
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/thank-you.js" type="module"></script>
+  </head>
+
+  <body>
+    <!-- Markup For The Header -->
+    <header>
+      <div class="nav-bar">
+        <img src="images/Cine Scope Logo.webp" alt="Cine Scope Logo" class="logo"/>
+        <span class="text">Cine Scope</span>
+        <img src="images/menu-burger.svg" alt="Menu Icon" class="menu-icon" id="menu-icon"/>
+      </div>
+
+      <nav class="side-bar" id="side-bar">
+        <img src="images/cross.svg" alt="Close Icon" class="close-icon" id="close-icon"/>
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="movie-page.html">Explore</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="">
+      <div class="overlay"></div>
+      <section class="summary-card">
+        <img src="images/success-check.svg" alt="Success Icon">
+        <h1 class="accent-text">Success! Your Form is Received.</h1>
+        <p>Thank you for contacting us. Here is a summary of your form:</p>
+        
+        <div id="form-details" class="form-details">
+          <!-- <div class="user-detail">
+            <span>First Name</span>
+            <b>Joshua</b>
+          </div>
+
+          <div class="user-detail">
+            <span>First Name</span>
+            <b>Joshua</b>
+          </div>
+
+          <div class="user-detail">
+            <span>First Name</span>
+            <b>Joshua</b>
+          </div>
+
+          <div class="user-detail">
+            <span>First Name</span>
+            <b>Joshua</b>
+          </div>
+
+          <div class="user-detail">
+            <span>First Name</span>
+            <b>Joshua</b>
+          </div> -->
+            <!-- Data populated via JS -->
+        </div>
+
+        <div class="form-actions">
+            <a href="index.html" class="form-submit">Back to Home</a>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    <div class="footer-section asset">
+      <div class="logos">
+        <img src="images/Cine Scope Logo.webp" alt="CineScope Logo" class="logo">
+        <span>CineScope</span>
+      </div>
+      <p>Your ultimate destination for discovering movies and TV Shows</p>
+
+      <div class="reference">
+        <span>This products uses the TMDB API but is not endorsed or certified by TMDB</span>
+      </div>
+    </div>
+
+
+    <div class="footer-section links">
+
+      <p>Quick Links</p>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">API Documentation</a></li>
+      </ul>
+    </div>
+
+
+    <div class="footer-section social-links">
+
+      <div class="socials">
+        <a href="#">          
+          <img src="images/facebook.svg" alt="Facebook Icon">
+        </a>
+
+        <a href="#">
+          <img src="images/github.svg" alt="Github Icon">
+        </a>
+
+        <a href="#">
+          <img src="images/linkedin.svg" alt="Linkedin Icon">
+        </a>
+
+        <a href="#">
+          <img src="images/twitter-x.svg" alt="Twitter Icon">
+        </a>
+
+      </div>
+
+      <!-- <p>@2024 CineScope. All right reserved</p> -->
+    </div>
+  </footer>
+  
+  </body>
+</html>

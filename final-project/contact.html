@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact CineScope | Movie Discovery</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/large.css">
     <link rel="stylesheet" href="styles/contact.css">
+
+    <script src="scripts/contact.js" type="module"></script>
   </head>
 
   <body>
@@ -22,13 +25,14 @@
         <ul>
           <li class="current"><a href="index.html">Home</a></li>
           <li><a href="movie-page.html">Explore</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
 
     <main>
+      <div class="overlay"></div>
     <!-- Hero Section -->
       <section class="hero">
         <div class="hero-overlay"></div>
@@ -89,46 +93,66 @@
 
           <!-- Right Side: Contact Form Card -->
           <div class="contact-card">
-            <form id="contactForm">
+            <form id="contact-form" method="get" action="thank-you.html">
 
-              <div class="form-group">
-                <label for="full-name">Full Name *</label>
-                <input type="text" id="full-name" required placeholder="John Doe">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name *</label>
+                  <input type="text" id="first-name" placeholder="John" autocomplete="given-name" name="first_name">
+                  <p class="error-message"></p>
+                </div>
+
+                <div class="form-group">
+                  <label for="last-name">Last Name *</label>
+                  <input type="text" id="last-name" placeholder="Doe" autocomplete="family-name" name="last_name">
+                  <p class="error-message"></p>
+                </div>
+  
               </div>
 
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" required placeholder="john@example.com">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" placeholder="john@example.com" autocomplete="email" name="email">
+                  <p class="error-message"></p>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" placeholder="+234..." autocomplete="tel" name="phone_number">
+                </div>
+  
               </div>
 
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="+234..." />
-              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="subject">Subject *</label>
+                  <input type="text" id="subject" placeholder="How can we help?" name="subject">
+                  <p class="error-message"></p>
+                </div>
 
-              <div class="form-group">
-                <label for="subject">Subject *</label>
-                <input type="text" id="subject" required placeholder="How can we help?">
-              </div>
-
-              <div class="form-group">
-                <label for="category">Category</label>
-                <select id="category">
-                  <option value="general">General Inquiry</option>
-                  <option value="feedback">Feedback</option>
-                  <option value="technical">Technical Issue</option>
-                  <option value="movie-suggestion">Movie Suggestion</option>
-                </select>
+                <div class="form-group">
+                  <label for="category">Category</label>
+                  <select id="category">
+                    <option value="general">General Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="technical">Technical Issue</option>
+                    <option value="movie-suggestion">Movie Suggestion</option>
+                  </select>
+                </div>
+  
               </div>
 
               <div class="form-group">
                 <label for="message">Message *</label>
-                <textarea id="message" rows="5" required placeholder="Type your message here..."
-                ></textarea>
+                <textarea id="message" rows="5" placeholder="Type your message here..."
+                name="message"></textarea>
+                <p class="error-message"></p>
               </div>
 
+
               <div class="checkbox-group">
-                <input type="checkbox" id="subscribe" />
+                <input type="checkbox" id="subscribe">
                 <label for="subscribe">Subscribe to movie updates</label>
               </div>
 
@@ -193,19 +217,9 @@
 
         </div>
 
-        <p>@2024 CineScope. All right reserved</p>
+        <!-- <p>@2024 CineScope. All right reserved</p> -->
       </div>
     </footer>
 
-    <!-- <script>
-          const form = document.getElementById('contactForm');
-          const success = document.getElementById('successMessage');
-          form.addEventListener('submit', (e) => {
-              e.preventDefault();
-              success.style.display = 'block';
-              form.reset();
-              setTimeout(() => { success.style.display = 'none'; }, 5000);
-          });
-      </script> -->
   </body>
 </html>

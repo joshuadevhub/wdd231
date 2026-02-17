@@ -1,13 +1,37 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact CineScope | Movie Discovery</title>
+    <title>CineScope | Contact Us</title>
 
+    <!-- General SEO Meta Tags -->
+    <meta name="description" content="Contact CineScope for inquiries, feedback, or support. We would love to hear from you.">
+    <meta name="author" content="Elemide Joshua Damilare">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"/>
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Contact Us | CineScope">
+    <meta property="og:description" content="Reach out to CineScope for questions, feedback, or collaboration opportunities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joshuadevhub.github.io/wdd231/final-project/contact.html">
+    <meta property="og:image" content="https://joshuadevhub.github.io/wdd231/final-project/images/cinescope-og-image.webp">
+    <meta property="og:site_name" content="CineScope">
+
+    <!-- External Styling and Scripts -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/large.css">
-    <link rel="stylesheet" href="styles/contact.css">
+    <!-- <link rel="stylesheet" href="styles/contact.css"> -->
 
     <script src="scripts/contact.js" type="module"></script>
   </head>
@@ -15,13 +39,13 @@
   <body>
     <header>
       <div class="nav-bar">
-        <img src="images/Cine Scope Logo.webp" alt="Cine Scope Logo" class="logo"/>
+        <img src="images/cinescope-logo.webp" alt="Cine Scope Logo" class="logo">
         <span class="text">Cine Scope</span>
-        <img src="images/menu-burger.svg" alt="Menu Icon" class="menu-icon" id="menu-icon"/>
+        <img src="images/menu-burger.svg" alt="Menu Icon" class="menu-icon" id="menu-icon">
       </div>
 
       <nav class="side-bar" id="side-bar">
-        <img src="images/cross.svg" alt="Close Icon" class="close-icon" id="close-icon"/>
+        <img src="images/cross.svg" alt="Close Icon" class="close-icon" id="close-icon">
         <ul>
           <li class="current"><a href="index.html">Home</a></li>
           <li><a href="movie-page.html">Explore</a></li>
@@ -31,7 +55,7 @@
     </header>
 
 
-    <main>
+    <main class="contact-container">
       <div class="overlay"></div>
     <!-- Hero Section -->
       <section class="hero">
@@ -156,11 +180,7 @@
                 <label for="subscribe">Subscribe to movie updates</label>
               </div>
 
-              <button type="submit" class="btn-submit">Send Message</button>
-
-              <div id="successMessage" class="success-box">
-                Message sent successfully!
-              </div>
+              <button type="submit" class="contact-submit">Send Message</button>
 
             </form>
           </div>
@@ -172,7 +192,7 @@
     <footer>
       <div class="footer-section asset">
         <div class="logos">
-          <img src="images/Cine Scope Logo.webp" alt="CineScope Logo" class="logo">
+          <img src="images/cinescope-logo.webp" alt="CineScope Logo" class="logo" loading="lazy">
           <span>CineScope</span>
         </div>
         <p>Your ultimate destination for discovering movies and TV Shows</p>

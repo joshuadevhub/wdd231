@@ -4,8 +4,6 @@
   --bg-main: #0b0b0b;
   /* Slightly lighter gray for cards and section backgrounds */
   --bg-surface: #161616;
-  /* Even lighter gray for hover states on cards */
-  --bg-surface-hover: #1f1f1f;
 
   /* --- BRAND / ACTION COLORS --- */
   /* Main Brand Red: Optimized for contrast against black */
@@ -22,27 +20,21 @@
   --text-secondary: #b3b3b3;
   /* Darker gray for disabled text or placeholders (Contrast 4.6:1 - Passes AA) */
   --text-muted: #8c8c8c;
-  /* Text color used inside red buttons */
-  --text-on-button: #ffffff;
 
 
   /* --- BORDERS & DIVIDERS --- */
-  --border-subtle: #262626;
-  --border-focus: #e50914;
+  --border-subtle: #7e7e7e;
 
-  /* --- GRADIENTS --- */
-  /* Cinematic fade for movie posters */
-  --gradient-overlay: linear-gradient(
-    to top,
-    rgba(10, 10, 10, 1) 0%,
-    rgba(10, 10, 10, 0) 100%
-  );
-
-  --dialog-gradient-1: linear-gradient( 135deg, #0f0c29, #302b63, #24243e);
+  /*--- GRADIENTS --- */
   --dialog-gradient-2: linear-gradient( 135deg, #000000, #1a0000, #e50914);
   --dialog-gradient-4: linear-gradient( 135deg, rgba(229, 9, 20, 0.6), rgba(0, 0, 0, 0.6), rgba(26, 0, 0, 0.6));
-  --dialog-gradient-3: linear-gradient( 135deg, rgba(30, 30, 30, 0.95), rgba(10, 10, 10, 0.95));
   --dialog-box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+
+  /* Styling For the Contact Page */
+  --bg-deep: #050a18; /* Deep Navy */
+  --bg-card: #0d1526; /* Slightly lighter navy */
+  --input-bg: #1a243a;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 *,
 *::before,
@@ -120,7 +112,7 @@ nav .close-icon {
   font-size: 1.2rem;
 }
 .side-bar ul li:not(.current):hover {
-  border-bottom: 1px solid var(--text-on-button);
+  border-bottom: 1px solid var(--text-primary);
 }
 .side-bar ul li.current {
   margin-top: 3rem;
@@ -151,6 +143,9 @@ nav .close-icon {
 main{
   /* position: relative; */
   flex: 1;
+}
+main  .title-hero{
+  margin: 1rem 0 0 0.5rem;
 }
 
 .hero-slider {
@@ -229,10 +224,9 @@ main{
   justify-content: space-between;
   border: none;
   cursor: pointer;
-  border-radius: 4px;
   padding: 0.3rem 1.5rem;
   background-color: var(--primary-red);
-  color: var(--text-on-button);
+  color: var(--text-primary);
   border-radius: 10px;
   transition: background 1s ease;
 }
@@ -288,55 +282,10 @@ main{
   object-position: center top;
 }
 
-/* .movies-container .popular-movie-list,
-.upcoming-movie-list {
-  display: flex;
-  width: 100%;
-  overflow-x: auto;
-  gap: 12px;
-  margin-top: 1rem;
-  overflow-y: hidden;
-} */
-/* .movies-container .top-rated {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-top: 1rem;
-} */
 img {
   display: block;
-  /* max-width: 100%; */
 }
 
-/* .movies-container .popular-movie-list > div,
-.upcoming-movie-list > div,
-.movies-container .top-rated > div {
-  min-width: 140px;
-  position: relative;
-  background: var(--border-subtle);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
-
-/* .movies-container .popular-movie-list > div img,
-.upcoming-movie-list > div img,
-.movies-container .top-rated > div img {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-} */
-
-/* .movies-container .popular-movie-list > div span,
-.upcoming-movie-list > div span,
-.movies-container .top-rated > div span {
-  width: 100%;
-  padding: 0.2rem;
-  font-size: 1.1rem;
-  background-color: var(--border-subtle);
-} */
 .loader{
   background-image: var(--dialog-gradient-2);
   box-shadow: var(--dialog-box-shadow);
@@ -419,7 +368,7 @@ dialog .loader-header > span{
   width: 20px;
   height: auto;
 }
-.third-section .third-section-body{
+.third-section .third-section-body ul{
   display: grid;
   grid-template-columns: 2fr 1.8fr;
 }
@@ -654,9 +603,229 @@ dialog .loader-header > span{
   cursor: pointer;
 }
 .summary-card .form-actions a{
-  color: var(--text-on-button);
+  color: var(--text-primary);
   text-decoration: none;
 }
+
+/* Css Styling For the Contact Page Of CineScope */
+.contact-container{
+  background-color: #050a18;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(5, 10, 24, 0.2), var(--bg-deep));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+.hero-content p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact-info > h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.8rem;
+}
+.contact-info > p{
+  margin-bottom: 0.8rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 10px;
+}
+
+.info-item img {
+  width: 30px;
+}
+
+.info-item span {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.info-item p {
+  font-weight: 400;
+}
+
+.social-links {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  transition: color 0.3s;
+  width: 44px;
+  text-align: center;
+}
+.social-links a img{
+  width: 20px;
+}
+
+/* Form Card */
+.contact-card {
+  background: var(--bg-card);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.8rem 0.7rem;
+  background: var(--input-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  transition: all 0.5s ease;
+  font-size: 1.1rem;
+}
+.form-group.error input{
+  border: 1px solid red;
+}
+.form-group.success input{
+  border: 1px solid green;
+}
+.error-message{
+  font-size: 0.9rem;
+  color: red;
+  margin-left: 0.5rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+.checkbox-group input {
+  width: 18px;
+  height: 18px;
+}
+.checkbox-group label{
+  margin-bottom: 6px;
+}
+
+.contact-submit {
+  width: 100%;
+  padding: 15px;
+  background: var(--btn-red);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.contact-submit:hover {
+  background: var(--btn-red-hover);
+  transform: translateY(-2px);
+}
+
+.contact-submit:active {
+  transform: translateY(0);
+}
+
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  
+  .contact-grid {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 0;
+      gap: 10px;
+  }
+  .contact-info {
+    margin-top: -46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-info h2, .contact-info p{
+    text-align: center;
+  }
+
+  .contact-section { margin-top: 0; padding-top: 40px; }
+
+  .contact-card {
+      padding: 25px;
+  }
+  .form-row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .info-item{
+    margin-left: 3.5rem;
+  }
+}
+
 /* Css Styling For The Footer */
 footer{
   margin: 0.3rem 0 0 0;
@@ -704,9 +873,6 @@ footer{
 }
 .links ul li a:hover{
   color: var(--primary-red);
-}
-.social-links{
-  text-align: center;
 }
 .social-links .socials{
   padding: 1rem;

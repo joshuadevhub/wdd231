@@ -64,7 +64,7 @@ function displayMovie(movies) {
   const joinedName = names.join(", ");
 
   movieInfo.innerHTML = `
-  <h1>${movies.original_title}</h1>
+  <h2>${movies.original_title}</h2>
           
   <div class="meta-data">
 

@@ -104,4 +104,17 @@
     grid-area: button;
     cursor: pointer;
   }
+  .hero-slider, .slide, .slide img{
+    aspect-ratio: 16 / 6;
+  }
+  .current-details{
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  .business-profile, footer, main div#cards{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .form-section{
+    grid-template-columns: auto 2fr;
+    gap: 1rem;
+  }
 }

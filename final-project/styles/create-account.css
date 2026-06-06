@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../images/cinescope-create-account.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  /* backdrop-filter: blur(1px); */
+  margin: 0;
+  filter: brightness(0.8) contrast(1.2);
+}
+header{
+  background-color: red;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+header span{
+  font-size: 2rem;
+}
+header img{
+  float: right;
+}

@@ -21,14 +21,14 @@ const gridIcon = document.querySelector("#grid-btn");
 const icon = document.querySelector("#icon");
 const mainContent = document.querySelector("#list");
 
-gridIcon.addEventListener("click", () => {
-  let isGrid = icon.src.includes("grid-view");
+// gridIcon.addEventListener("click", () => {
+//   let isGrid = icon.src.includes("grid-view");
 
-  icon.src = isGrid ? "images/list-view.svg" : "images/grid-view.svg";
-  icon.alt = isGrid ? "List View" : "Grid View";
+//   icon.src = isGrid ? "images/list-view.svg" : "images/grid-view.svg";
+//   icon.alt = isGrid ? "List View" : "Grid View";
 
-  mainContent.classList.toggle("list", isGrid);
-});
+//   mainContent.classList.toggle("list", isGrid);
+// });
 
 // javaScript For The Copyright Year and Last Modification
 const yearElement = document.querySelector("#year-element");

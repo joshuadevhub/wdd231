@@ -1,6 +1,6 @@
 @media (min-width: 38rem) {
-  header .hamburger,
-  nav .times {
+  .header > img:last-of-type,
+  .navigation > img {
     display: none;
   }
   nav.navigation {

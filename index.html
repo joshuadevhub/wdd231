@@ -1,27 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>WDD231 | Web Frontend Development</title>
 
-    <meta name="description" content="Web Frontend Development course homepage for WDD231, showcasing student portfolio, courses, and project details." />
+    <meta
+      name="description"
+      content="Web Frontend Development course homepage for WDD231, showcasing student portfolio, courses, and project details."
+    />
     <meta name="author" content="Elemide Joshua Damilare" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="WDD231 | Web Frontend Development Course Homepage" />
-    <meta property="og:description" content="Explore the WDD231 Web Frontend Development course homepage, featuring student portfolios, project details, and course information."/>
-    <meta property="og:image" content="https://joshuadevhub.github.io/wdd231/images/wdd231-preview.jpg" />
+    <meta
+      property="og:title"
+      content="WDD231 | Web Frontend Development Course Homepage"
+    />
+    <meta
+      property="og:description"
+      content="Explore the WDD231 Web Frontend Development course homepage, featuring student portfolios, project details, and course information."
+    />
+    <meta
+      property="og:image"
+      content="https://joshuadevhub.github.io/wdd231/images/wdd231-preview.jpg"
+    />
     <meta property="og:url" content="https://joshuadevhub.github.io/wdd231/" />
     <meta property="og:type" content="website" />
 
     <!-- External Links For CSS and javaScript -->
-    <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
 
@@ -29,22 +43,20 @@
   </head>
 
   <body>
-
-    <header>
-      <img src="images/home.svg" alt="site-logo" width="512" height="512" />
+    <header class="header">
+      <img src="images/home.svg" alt="site-logo" width="30" height="30" />
       <span>Joshua Damilare</span>
-      <button id="nav-button-menu" class="hamburger" aria-label="navigation"></button>
+      <img src="./final-project/images/menu-burger.svg" alt="Open Icon" width="20" height="20" id="nav-menu">
     </header>
 
     <nav id="nav-bar" class="navigation">
-      <button id="nav-button-close" class="times" aria-label="navigation"></button>
+      <img src="./final-project/images/cross.svg" alt="Close Icon" width="18" height="18" id="nav-close">
 
       <ul>
         <li class="current"><a href="#">Home</a></li>
         <li><a href="#">Chamber Project</a></li>
         <li><a href="#">Final Project</a></li>
       </ul>
-
     </nav>
 
     <div class="overlay" id="overlay"></div>
@@ -55,59 +67,56 @@
       <section class="card">
         <section class="general">
           <h2>About Me</h2>
-          <p>
-            I am a dedicated software development student at BYU Pathway,
-            passionate about building innovative web and mobile applications.
-            With a strong foundation in programming, web design, and
-            problem-solving, I enjoy turning ideas into functional,
-            user-friendly digital solutions. I am constantly learning new
-            technologies and frameworks, exploring both front-end and back-end
-            development, and applying my skills to practical projects. Beyond
-            coding, I am enthusiastic about collaborating with others, improving
-            workflows, and creating meaningful experiences that combine
-            technology with creativity.
-          </p>
+          <div class="general-content">
+            <p>
+              I am a dedicated software development student at BYU Pathway,
+              passionate about building innovative web and mobile applications.
+              With a strong foundation in programming, web design, and
+              problem-solving, I enjoy turning ideas into functional,
+              user-friendly digital solutions. I am constantly learning new
+              technologies and frameworks, exploring both front-end and back-end
+              development, and applying my skills to practical projects. Beyond
+              coding, I am enthusiastic about collaborating with others,
+              improving workflows, and creating meaningful experiences that
+              combine technology with creativity.
+            </p>
+          </div>
         </section>
 
         <section class="general">
           <h2>Student Photo</h2>
-          <img src="images/student_photowdd231.webp" alt="Student Photo" />
+          <div class="general-content">
+            <img src="images/student_photowdd231.webp" alt="Student Photo" />
+          </div>
         </section>
       </section>
 
       <section class="general">
         <h2>Web Certificate Courses</h2>
+        <div class="general-content">
+          <div class="filterBtns">
+            <button id="allBtn" class="all">All</button>
+            <button id="cseBtn" class="cse-btn">CSE</button>
+            <button id="wddBtn" class="wdd-btn">WDD</button>
+          </div>
 
-        <div class="filterBtns">
-          <button id="allBtn" class="all">All</button>
-          <button id="cseBtn" class="cse-btn">CSE</button>
-          <button id="wddBtn" class="wdd-btn">WDD</button>
-        </div>
+          <p class="credit-total"></p>
 
-        <p class="credit-total"></p>
-
-        <div class="courseList">
-          <!-- <div class="course">
-          <p>WDD130</p>
-        </div>
-
-        <div>
-          <p>WDD131</p>
-        </div>
-
-        <div>
-          <p>WDD231</p>
-        </div> -->
-
-          <p>The total number of credit</p>
+          <div class="courseList">
+            <p>The total number of credit</p>
+          </div>
         </div>
       </section>
 
       <!-- Add the Dialog Element -->
-      <!-- <dialog id="course-details">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam saepe quaerat quasi dolorum. Cupiditate voluptate deleniti porro repudiandae quisquam hic consectetur mollitia obcaecati. Reprehenderit error similique optio iusto laborum quisquam?</p>
-      </dialog> -->
-
+      <dialog id="course-details">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
+          saepe quaerat quasi dolorum. Cupiditate voluptate deleniti porro
+          repudiandae quisquam hic consectetur mollitia obcaecati. Reprehenderit
+          error similique optio iusto laborum quisquam?
+        </p>
+      </dialog>
     </main>
 
     <footer>
@@ -145,5 +154,10 @@
       <p><span id="year-element"></span> | Elemide Joshua Damilare | Nigeria</p>
       <p id="last-modified"></p>
     </footer>
+
+    <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
+    <script>
+      //lucide.createIcons();
+    </script>
   </body>
 </html>

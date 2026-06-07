@@ -23,55 +23,27 @@ body {
   flex-direction: column;
   background: var(--background-color);
   scroll-behavior: smooth;
-  /* color: var(--text-color); */
   font-family: var(--text-font);
+  line-height: 1.6;
 }
-header {
-  display: grid;
-  grid-template-columns: 24px auto 44px;
-  color: var(--primary-color);
-  border-bottom: 1px solid var(--primary-color);
-  width: 100%;
-  gap: 10px;
+
+.header{
+  background-color: var(--primary-color);
+  padding: 1rem;
+  display: flex;
   align-items: center;
-  padding: 0.6rem;
-  font-family: var(--heading-font);
+  justify-content: space-between;
+  color: var(--background-color);
 }
-header img {
-  width: 100%;
-  height: auto;
-  /* padding-bottom: 5px; */
-}
-header span {
-  font-size: 1.6rem;
+.header span{
+  font-size: 1.2rem;
   font-weight: bold;
 }
-header .hamburger,
-nav .times {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background: none;
-  border: none;
-  font-size: 36px;
-  position: relative;
-}
-#nav-button-menu::before {
-  content: "\2630";
-}
-#nav-button-close {
-  position: relative;
-  z-index: 1100;
-}
-#nav-button-close::before {
-  content: "\00D7";
-  left: 13rem;
-  top: 1rem;
-  position: absolute;
-  z-index: 1101;
-}
-nav.navigation {
+
+.navigation {
   background: var(--primary-color);
-  width:70%;
-  height: 100vh;
+  width:80%;
+  height: 100%;
   position: fixed;
   top: 0;
   right: 0;
@@ -84,10 +56,16 @@ nav.navigation {
 .navigation.active{
   transform: translateX(0);
 }
+
+.navigation > img{
+  position: absolute;
+  right: 1.1rem;
+  top: 1.3rem;
+}
 .overlay {
   position: fixed;
   inset: 0;
-  background: #00000066;
+  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
@@ -125,6 +103,7 @@ nav.navigation {
 .navigation ul li a:hover{
   color: var(--secondary-color);
 }
+
 main{
   flex: 1;
 }
@@ -135,13 +114,14 @@ main h1{
 }
 main .general{
   width: 94%;
-  background: #fff;
   margin: 0 auto 1.5rem auto;
   border: none;
   border-radius: 12px;
   overflow: auto;
-  box-shadow: 0 4px 20px #00000014;
-  /* margin-bottom: 3rem; */
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.5);
+}
+.general .general-content{
+  padding: 1rem;
 }
 .general h2{
   background: var(--primary-color);
@@ -154,38 +134,30 @@ main .general{
   width: 100%;
   font-family: var(--heading-font);
 }
-main p{
-  padding: 1rem;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+
 .general img{
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
-  padding: 1rem;
   margin: 1rem auto 1rem auto;
   border-radius: 2rem;
   border: 2px solid var(--background-color);
   transition: transform 0.5s ease;
 }
 .general img:hover {
-  transform: scale(1.05); /* Subtle interaction */
+  transform: scale(1.05);
 }
 
 .general .filterBtns{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  /* justify-content: space-between; */
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin: 1rem 1rem 0 1rem;
 }
 .filterBtns button{
-  /* width: 100px; */
-  padding: 0.5rem 2.2rem;
-  font-size: 1.3rem;
-  font-weight: bold;
+  width: fit-content;
+  padding: 0.4rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
   border-radius: 10px;
   text-align: center;
   border: 1px solid var(--background-color);
@@ -202,7 +174,6 @@ main p{
   grid-template-columns: 1fr;
   align-items: center;
   gap: 5px;
-  /* padding: 1rem; */
 }
 p.credit-total{
   text-align: center;
@@ -212,14 +183,16 @@ p.credit-total{
 .courseList div{
   margin: 0.4rem;
   background: var(--background-color);
-  border-left: 5px solid var(--primary-color);
-  padding: 0.5rem;
+  border-left: 6px solid var(--primary-color);
   border-radius: 10px;
   transition: all 0.5s ease;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+
 }
 .courseList div:hover{
   background: var(--primary-color);
-  transform: translateY(-5px); /* Lift effect */
+  transform: translateY(-5px);
 }
 .courseList div:hover p {
   color: #ffffff;
@@ -227,10 +200,9 @@ p.credit-total{
 .courseList div p{
   text-align: center;
   font-size: 1.1rem;
-  /* font-weight: bold; */
 }
 
-/* #course-details{
+#course-details{
   border: 1px solid rgb(0 0 0 / 10%);
   border-radius: .25rem;
   padding: 1rem;
@@ -241,11 +213,9 @@ p.credit-total{
 }
 ::backdrop {
   background-color: rgb(0 0 0 / 50%);
-} */
+}
 footer{
   width: 100%;
-  /* bottom: 0; */
-  /* position: absolute; */
   background: #dddddd;
   padding: 1rem;
   text-align: center;

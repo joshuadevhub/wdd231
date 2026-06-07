@@ -1,8 +1,8 @@
 // Wait until the HTML document is fully loaded before running JavaScript
 document.addEventListener("DOMContentLoaded", () => {
   /* ================================ NAVIGATION MENU ================================ */
-  const hamburgerBtn = document.querySelector("#nav-button-menu");
-  const closeNavBtn = document.querySelector("#nav-button-close");
+  const hamburgerBtn = document.querySelector("#nav-menu");
+  const closeNavBtn = document.querySelector("#nav-close");
   const mainNav = document.querySelector("#nav-bar");
   const bodyOverlay = document.getElementById("overlay");
 
